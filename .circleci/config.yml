@@ -24,8 +24,8 @@ jobs:
           paths:
             - "node_modules"
       #- run:
-        #  name: "Run test"
-        #  command: npm run test
+      #  name: "Run test"
+      #  command: npm run test
       - run:
           name: "Build application for production"
           command: npm run build
