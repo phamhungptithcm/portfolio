@@ -1,26 +1,37 @@
+# Hung Pham - Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+## Description
 
-## Development server
+This is the source code for Hung Pham's portfolio website. It's built with Angular 16 and uses various libraries such as Angular Fire, Angular Scroll, Angulartics2, Bootstrap, and more.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Angular Animations**: For smooth and engaging animations.
+- **Angular Fire**: For integrating Firebase.
+- **Angular Scroll**: For scroll events and animations.
+- **Angulartics2**: For analytics tracking.
+- **Bootstrap**: For responsive design and prebuilt components.
+- **Lightbox2**: For displaying images in a "lightbox" that floats overtop of web page.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+1. Clone the repository.
+2. Run `npm install` to install the dependencies.
+3. Run `npm start` to start the development server.
+4. Visit `http://localhost:4200` in your browser.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment
 
-## Running unit tests
+To build the project for production, run `npm run build`. This will create a `dist/` directory with the compiled assets.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contributing
 
-## Running end-to-end tests
+If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## License
 
-## Further help
+This project is open source and available under the [MIT License](LICENSE).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+
+If you have any questions, feel free to reach out to me at [email](mailto:phamhung.pitit@gmail.com).
