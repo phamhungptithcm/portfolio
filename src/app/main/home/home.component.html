@@ -16,6 +16,9 @@
           <a class="px-btn" href="#contact">
             Work with me <i class="bi-arrow-up-right"></i>
           </a>
+          <span class="bi-envelope" id="count" style="margin-left: 16px"
+            >Loading...</span
+          >
         </div>
         <div class="info-bar">
           <p><i class="bi-phone"></i> <span>+1945 236 9965</span></p>
@@ -47,3 +50,20 @@
     ></a>
   </div>
 </div>
+<script>
+  // Replace 'your-unique-key' with your actual key
+  const countAPIUrl = "https://api.countapi.xyz/hit/hunpeo97.web.app/visits";
+
+  // Function to update visit count
+  function updateVisitCount() {
+    fetch(countAPIUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("count").innerText = data.value;
+      })
+      .catch((error) => console.error("Error fetching visit count:", error));
+  }
+
+  // Update visit count on page load
+  updateVisitCount();
+</script>
