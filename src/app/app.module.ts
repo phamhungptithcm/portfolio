@@ -6,6 +6,7 @@ import { MainComponent } from "./main/main.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CarouselModule } from "ngx-owl-carousel-o";
 import { RouterModule } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from "./main/home/home.component";
 import { AboutComponent } from "./main/about/about.component";
 import { ExperienceComponent } from "./main/experience/experience.component";
@@ -34,6 +35,7 @@ import { AngularFireModule } from "@angular/fire/compat";
     RouterModule,
     BrowserAnimationsModule,
     CarouselModule,
+    HttpClientModule,
     ScrollSpyModule,
     NgClickOutsideDirective,
     AngularFireModule.initializeApp(environment.firebaseConfig),
