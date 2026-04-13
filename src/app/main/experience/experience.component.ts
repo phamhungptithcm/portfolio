@@ -16,7 +16,7 @@ type Role = {
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
 
   roles: Role[] = [
     {

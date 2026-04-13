@@ -15,12 +15,12 @@ type ContactAction = {
 })
 export class ContactComponent {
   email = 'phamhung.working@gmail.com';
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
 
   talkingPoints = [
-    'Best fit: Senior or Staff backend, platform, and distributed systems roles.',
-    'Strongest domains: cloud-native services, payments, operations tooling, and release reliability.',
-    'Preferred signal in outreach: scope of ownership, team context, and technical problems to solve.'
+    'Best fit: Senior or Staff platform, backend, applied AI, and developer tooling roles.',
+    'Strongest domains: cloud-native services, payments, developer tools, operations tooling, and release reliability.',
+    'Preferred signal in outreach: scope of ownership, team context, product stage, and technical problems to solve.'
   ];
 
   actions: ContactAction[] = [

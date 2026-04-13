@@ -3,3 +3,6 @@ node_modules
 .angular/cache/
 dist
 .firebase
+.playwright-cli/
+output/
+.venv-pdf/

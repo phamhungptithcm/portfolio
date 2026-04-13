@@ -10,7 +10,7 @@ type NavLink = { id: string; label: string };
 export class HeaderComponent implements AfterViewInit, OnDestroy {
   @Input() brandName = 'Hung Pham';
 
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
   sidebarOpen = false;
   currentSection = 'home';
 

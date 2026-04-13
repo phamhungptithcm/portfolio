@@ -7,26 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   name = 'Hung Pham';
-  title = 'Senior Java / Platform Engineer';
+  title = 'Senior Platform / Applied AI Engineer';
   location = 'Dallas, Texas';
 
   avatarUrl = 'assets/img/avatar/avatar.JPEG';
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
   linkedinUrl = 'https://www.linkedin.com/in/hunpham/';
   email = 'phamhung.working@gmail.com';
   websiteUrl = 'https://hunpeo.web.app/';
 
   leverageAreas = [
     'Service boundaries, API contracts, and event-driven integration.',
+    'Applied AI workflows with prompt quality guardrails, local privacy checks, and behavior-aware UX.',
     'Production observability, incident response, and post-mortem follow-through.',
-    'Operator-facing Angular tooling that supports real business workflows.',
+    'Mobile and operator-facing products that turn backend complexity into usable workflows.',
     'Cross-team delivery quality through reviews, standards, and mentorship.'
   ];
 
   operatingPrinciples = [
     'Design for the support burden, not just the happy path.',
     'Ship observability with the feature, not after the incident.',
-    'Use metrics and failure modes to guide architecture decisions.',
+    'Use AI where it improves workflow quality, not just output volume.',
     'Favor systems that teams can understand and own over clever abstractions.'
   ];
 
@@ -34,12 +35,16 @@ export class AboutComponent {
     'Java 17+',
     'Spring Boot',
     'Microservices',
+    'Applied AI',
     'AWS',
     'Kubernetes',
     'Kafka',
     'Redis',
     'Elasticsearch',
     'Angular',
+    'Flutter',
+    'Firebase',
+    'Chrome Extensions',
     'TypeScript',
     'Payments',
     'Observability'

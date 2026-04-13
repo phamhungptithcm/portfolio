@@ -29,28 +29,28 @@ export class ServicesComponent {
       tags: ['Java', 'Spring Boot', 'Kafka', 'Redis', 'Elasticsearch']
     },
     {
-      id: 'tooling',
-      kicker: 'Frontend + Operations',
-      title: 'Operator-facing products that make backend complexity usable',
-      description: 'I build Angular surfaces for support, operations, and internal teams where correctness, accessibility, and clarity matter more than visual novelty.',
+      id: 'applied-ai',
+      kicker: 'Applied AI Products',
+      title: 'AI workflows with guardrails, feedback loops, and useful UX',
+      description: 'I build AI products that improve how people work, with prompt quality scoring, local safety checks, and interfaces that reinforce better behavior instead of blind copy-paste.',
       details: [
-        'Angular workflows that expose the right system state to the people running the business.',
-        'Payment and tolling experiences designed around trust, validation, and operational edge cases.',
-        'UI decisions made with platform constraints and support outcomes in mind.'
+        'Real-time prompt scoring and linter patterns for AI chat and copilot-style workflows.',
+        'Local redaction and privacy-minded guardrails before prompts leave the browser.',
+        'Product framing that treats AI as workflow design, not just model integration.'
       ],
-      tags: ['Angular', 'TypeScript', 'Accessibility', 'Payments']
+      tags: ['Applied AI', 'Prompt Quality', 'Chrome Extension', 'TypeScript', 'LLM UX']
     },
     {
-      id: 'delivery',
-      kicker: 'Reliability + Delivery',
-      title: 'Observability and release standards that teams can trust',
-      description: 'I improve production readiness through dashboards, diagnostics, CI guardrails, and practical standards that reduce release friction and incident cost.',
+      id: 'product-systems',
+      kicker: 'Product + Delivery Systems',
+      title: 'Mobile products and release systems teams can actually operate',
+      description: 'I turn product ideas into systems with identity, billing, docs, CI/CD, and monitoring so the product can survive beyond the first demo.',
       details: [
-        'Observability patterns, incident diagnostics, and post-mortem follow-through.',
-        'Release automation and quality gates that make multi-repo delivery safer.',
-        'Mentorship and review standards that raise the engineering bar across teams.'
+        'Flutter and Firebase foundations for mobile-first products with secure access and operational workflows.',
+        'Release automation, health checks, and documentation that keep independent products maintainable.',
+        'Delivery standards that make multi-repo changes safer for product, QA, and support.'
       ],
-      tags: ['AWS', 'Kubernetes', 'CI/CD', 'Observability', 'Mentorship']
+      tags: ['Flutter', 'Firebase', 'CI/CD', 'Monitoring', 'Billing']
     }
   ];
 

@@ -19,20 +19,20 @@ type QuickLink = {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-  roleEyebrow = 'Senior Java / Platform Engineer';
+  roleEyebrow = 'Senior Platform / Applied AI Engineer';
   email = 'phamhung.working@gmail.com';
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
 
   proofMetrics: ProofMetric[] = [
-    { value: '7+ years', label: 'building cloud-native systems' },
+    { value: '7+ years', label: 'shipping production systems' },
     { value: '~50%', label: 'faster incident resolution' },
-    { value: 'Java / Spring / AWS', label: 'core platform stack' }
+    { value: 'Applied AI', label: 'developer tooling with guardrails' }
   ];
 
   outcomes = [
     'Reduced incident resolution time by about 50% through observability, better diagnostics, and post-mortem discipline.',
-    'Reduced checkout latency by about 35% with caching and asynchronous payment workflows.',
-    'Delivered secure tolling, payments, and operator tooling across FPT Americas, Quarterhill programs, and independent product work.'
+    'Built AI Dev Coach to improve prompt quality and reduce bad AI habits through real-time scoring, redaction, and coaching loops.',
+    'Built BeFam as a mobile-first clan operations product spanning Flutter, Firebase, billing, docs, and release workflows.'
   ];
 
   quickLinks: QuickLink[] = [
