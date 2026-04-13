@@ -1,49 +1,67 @@
-<div class="container">
-  <div class="row gy-5">
-    <div class="col-lg-5">
-      <div class="section-heading">
-        <h6>Experience</h6>
-        <h2>My experience</h2>
-        <p>
-          Experienced and results-driven software engineer with a strong
-          background in full-stack development and a proven track record of
-          delivering high-quality software solutions.
-        </p>
-        <div class="btn-bar">
-          <a
-            class="px-btn dark"
-            href="../../../assets/Resume-Hung-Pham.pdf"
-            download
-          >
-            Download my resume <i class="bi-download"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-7 ps-xl-5">
-      <ul class="resume-box">
-        <li>
-          <h5>Senior Software Enginner</h5>
-          <div class="r-meta">
-            <span>-2022 - Present</span>
-            <p class="hp-company">@ FPT Americas</p>
-          </div>
-        </li>
-        <li>
-          <h5>Senior Software Enginner</h5>
-          <div class="r-meta">
-            <span>-2021 - 2022</span>
-            <p class="hp-company">@FPT Software</p>
-          </div>
-        </li>
-        <li>
-          <h5>Software Enginner</h5>
-          <div class="r-meta">
-            <span>-2018 - 2021</span>
-            <p class="hp-company">@FPT Software</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+<section class="experience container" aria-labelledby="exp-title" itemscope itemtype="https://schema.org/ItemList">
+  <div class="section-heading">
+    <h6>Experience</h6>
+    <h2 id="exp-title">Built across product delivery, payments, and transportation systems.</h2>
+    <p class="section-copy">
+      The strongest signal in my background is not one stack. It is repeated ownership across architecture, delivery quality, and production health.
+    </p>
   </div>
-</div>
+
+  <div class="experience-grid">
+    <div class="experience-lead">
+      <p class="lead-stat">7+ years</p>
+      <p class="lead-copy">
+        Shipping backend platforms, distributed systems, payment workflows, and operator tooling with an emphasis on maintainability and supportability.
+      </p>
+
+      <a class="resume-link" [href]="resumeUrl" download (click)="track('resume_download')">
+        Download Resume <i class="bi-download" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <ol class="resume-box" role="list">
+      <li
+        *ngFor="let role of roles; index as i; trackBy: trackByCompany"
+        class="resume-item"
+        [attr.itemprop]="'itemListElement'"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <meta itemprop="position" [content]="i + 1" />
+
+        <div class="resume-item-header">
+          <div>
+            <h3 class="role" itemprop="name">{{ role.title }}</h3>
+            <p class="company">{{ role.company }}<span *ngIf="role.location"> · {{ role.location }}</span></p>
+          </div>
+
+          <div class="date-block">
+            <span class="dates">
+              <time [attr.datetime]="role.start | date:'yyyy-MM-dd'">{{ role.start | date:'MMM yyyy' }}</time>
+              -
+              <time *ngIf="role.end; else present" [attr.datetime]="role.end | date:'yyyy-MM-dd'">
+                {{ role.end | date:'MMM yyyy' }}
+              </time>
+              <ng-template #present>Present</ng-template>
+            </span>
+            <span class="tenure">{{ tenureLabel(role.start, role.end) }}</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li *ngFor="let bullet of role.achievements; trackBy: trackByValue">{{ bullet }}</li>
+        </ul>
+
+        <div class="tags">
+          <span class="badge" *ngFor="let skill of role.skills; trackBy: trackByValue">{{ skill }}</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <script type="application/ld+json">
+    {{
+      experienceJsonLd
+    }}
+  </script>
+</section>

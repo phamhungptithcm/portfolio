@@ -1,107 +1,62 @@
-<div class="container">
+<section class="work container" aria-labelledby="work-title">
   <div class="section-heading">
-    <h6>My Work</h6>
-    <h2>Recent project</h2>
+    <h6>Case Studies</h6>
+    <h2 id="work-title">Selected work with real operational complexity.</h2>
+    <p class="section-copy">
+      These are the projects that best show system design, product ownership, and delivery discipline rather than just tool familiarity.
+    </p>
   </div>
-  <div class="row gy-5 lightbox-gallery">
-    <div class="col-lg-6">
-      <a
-        href="https://github.com/phamhungptithcm/JavaWebDeveloperDocumentation"
-        target="_blank"
-      >
-        <div class="work-box">
-          <div class="work-img">
-            <a href="assets/img/java_web.png">
-              <img src="assets/img/java_web.png" title="" alt="" />
-            </a>
-          </div>
-          <div class="work-text">
-            <h6>Java Web Developer Documentation</h6>
-            <h4>Sharing experiences for java web developer</h4>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-lg-6">
-      <div class="work-box">
-        <div class="work-img">
+
+  <div class="case-studies">
+    <article class="case-study" *ngFor="let project of projects; index as i; trackBy: trackById" [class.case-study--reverse]="i % 2 === 1">
+      <div class="case-study__lead">
+        <p class="case-study__kicker">{{ project.badge }}</p>
+        <h3>{{ project.title }}</h3>
+        <p class="case-study__summary">{{ project.summary }}</p>
+
+        <div class="case-study__actions" *ngIf="project.actions.length">
           <a
-            href="assets/img/default.png"
-            title="View Gallery"
-            data-title="Caption for image 2"
-            data-lightbox="services"
+            *ngFor="let action of project.actions; trackBy: trackByHref"
+            class="case-study__action"
+            [href]="action.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            (click)="track(action.event)"
           >
-            <img src="assets/img/default.png" title="" alt="" />
+            {{ action.label }}
           </a>
         </div>
-        <div class="work-text">
-          <h6>UX case study</h6>
-          <h4>Bally Website Research</h4>
-          <div class="btn-bar">
-            <a
-              class="gallery-link"
-              title="Read More"
-              data-bs-toggle="modal"
-              data-bs-target="#work_2"
-              ><i class="bi-arrow-up-right"></i
-            ></a>
-          </div>
+      </div>
+
+      <div class="case-study__detail">
+        <div class="detail-row">
+          <p class="detail-label">Problem</p>
+          <p>{{ project.problem }}</p>
+        </div>
+
+        <div class="detail-row">
+          <p class="detail-label">Role</p>
+          <p>{{ project.role }}</p>
+        </div>
+
+        <div class="detail-row">
+          <p class="detail-label">Solution</p>
+          <ul>
+            <li *ngFor="let item of project.solution; trackBy: trackByValue">{{ item }}</li>
+          </ul>
+        </div>
+
+        <div class="detail-row">
+          <p class="detail-label">Impact</p>
+          <ul>
+            <li *ngFor="let item of project.impact; trackBy: trackByValue">{{ item }}</li>
+          </ul>
+        </div>
+
+        <div class="tags">
+          <span class="badge" *ngFor="let tag of project.stack; trackBy: trackByValue">{{ tag }}</span>
         </div>
       </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="work-box">
-        <div class="work-img">
-          <a
-            href="assets/img/default.png"
-            title="View Gallery"
-            data-title="Caption for image 3"
-            data-lightbox="services"
-          >
-            <img src="assets/img/default.png" title="" alt="" />
-          </a>
-        </div>
-        <div class="work-text">
-          <h6>UX case study</h6>
-          <h4>Bally Website Research</h4>
-          <div class="btn-bar">
-            <a
-              class="gallery-link"
-              title="Read More"
-              data-bs-toggle="modal"
-              data-bs-target="#work_3"
-              ><i class="bi-arrow-up-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="work-box">
-        <div class="work-img">
-          <a
-            href="assets/img/default.png"
-            title="View Gallery"
-            data-title="Caption for image 3"
-            data-lightbox="services"
-          >
-            <img src="assets/img/default.png" title="" alt="" />
-          </a>
-        </div>
-        <div class="work-text">
-          <h6>UX case study</h6>
-          <h4>Bally Website Research</h4>
-          <div class="btn-bar">
-            <a
-              class="gallery-link"
-              title="Read More"
-              data-bs-toggle="modal"
-              data-bs-target="#work_4"
-              ><i class="bi-arrow-up-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </article>
   </div>
-</div>
+</section>

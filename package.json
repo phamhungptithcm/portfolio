@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --configuration production --aot",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postinstall": "node scripts/fix-rxjs-types.mjs"
   },
   "private": true,
   "dependencies": {

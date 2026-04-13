@@ -1,69 +1,56 @@
-<div class="container">
-  <div class="row min-vh-100 align-items-center">
-    <div class="col-lg-7 col-xl-7 col-xxl-6">
-      <div class="hb-text">
-        <h1>
-          My name <br />is <b>Hung</b>
-          <span
-            ><br />
-            Pham...</span
-          >
-        </h1>
-        <p class="lead">
-          <span>Senior Software Enginner</span> based in <span>USA</span>
-        </p>
-        <div class="btn-bar">
-          <a class="px-btn" href="#contact">
-            Work with me <i class="bi-arrow-up-right"></i>
-          </a>
-          <!-- <span class="bi-envelope" id="count" style="margin-left: 16px"
-            >Loading...</span -->
-          >
-        </div>
-        <div class="info-bar">
-          <p><i class="bi-phone"></i> <span>+1945 236 9965</span></p>
-          <p>
-            <i class="bi-envelope"></i>
-            <span>phamhung.pitit@gmail.com</span>
-          </p>
-        </div>
+<section class="home container" aria-labelledby="home-title">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ roleEyebrow }}</p>
+
+      <h1 id="home-title" class="hero-title">
+        I design reliable <span>Spring Boot</span> platforms for high-stakes operations.
+      </h1>
+
+      <p class="hero-summary">
+        I build cloud-native Java services, event-driven systems, and operator-facing Angular products on AWS and Kubernetes.
+        My focus is reliability, observability, and delivery discipline so teams can ship faster and support production with confidence.
+      </p>
+
+      <div class="btn-bar">
+        <a class="px-btn px-btn--primary" [href]="resumeUrl" download (click)="track('cta_download_resume')">
+          Download Resume <i class="bi-download" aria-hidden="true"></i>
+        </a>
+        <a class="px-btn px-btn--ghost" href="#work" (click)="track('cta_view_work')">
+          View Case Studies <i class="bi-arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <a class="px-btn px-btn--ghost" [href]="mailtoHref" (click)="track('cta_email')">
+          Email Me <i class="bi-envelope" aria-hidden="true"></i>
+        </a>
       </div>
+
+      <ul class="proof-strip" aria-label="Recruiter proof points">
+        <li *ngFor="let item of proofMetrics; trackBy: trackByLabel">
+          <strong>{{ item.value }}</strong>
+          <span>{{ item.label }}</span>
+        </li>
+      </ul>
     </div>
-  </div>
-</div>
-<div
-  class="hb-me"
-  style="background-image: url(assets/img/home-banner1.png)"
-></div>
-<div class="social-fix">
-  <div class="social-links">
-    <a href="https://github.com/phamhungptithcm" target="_blank"
-      ><i class="fab fa-github"></i
-    ></a>
-    <a
-      href="https://www.linkedin.com/in/hunpham/details/experience/"
-      target="_blank"
-      ><i class="fab fa-linkedin"></i
-    ></a>
-    <a href="https://www.facebook.com/hawaihouu/" target="_blank"
-      ><i class="fab fa-facebook"></i
-    ></a>
-  </div>
-</div>
-<script>
-  // Replace 'your-unique-key' with your actual key
-  const countAPIUrl = "https://api.countapi.xyz/hit/hunpeo97.web.app/visits";
 
-  // Function to update visit count
-  function updateVisitCount() {
-    fetch(countAPIUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        document.getElementById("count").innerText = data.value;
-      })
-      .catch((error) => console.error("Error fetching visit count:", error));
-  }
+    <aside class="hero-card" aria-labelledby="hero-proof-title">
+      <p class="eyebrow eyebrow--muted">Selected outcomes</p>
+      <h2 id="hero-proof-title">Production ownership, not just feature delivery.</h2>
 
-  // Update visit count on page load
-  updateVisitCount();
-</script>
+      <ul class="outcome-list">
+        <li *ngFor="let item of outcomes; trackBy: trackByValue">{{ item }}</li>
+      </ul>
+
+      <div class="hero-links">
+        <a
+          *ngFor="let link of quickLinks; trackBy: trackByHref"
+          [href]="link.href"
+          [attr.target]="link.external ? '_blank' : null"
+          [attr.rel]="link.external ? 'noopener noreferrer' : null"
+          (click)="track(link.event)"
+        >
+          {{ link.label }}
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>

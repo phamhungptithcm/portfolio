@@ -1,0 +1,142 @@
+.about {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-copy {
+  max-width: 42rem;
+  margin: 0.8rem 0 0;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.about-grid {
+  display: grid;
+  gap: 1.6rem;
+
+  @media (min-width: 1080px) {
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+.identity-card,
+.detail-card {
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.identity-card {
+  padding: 1.5rem;
+}
+
+.about-avatar {
+  margin-bottom: 1.25rem;
+
+  img {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+  }
+}
+
+.name {
+  margin: 0;
+  color: var(--px-white);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 700;
+}
+
+.title-location,
+.availability {
+  margin: 0.75rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.sep {
+  margin: 0 0.35rem;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.px-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffe6bc, #cf9c70);
+  color: #171717;
+  text-decoration: none;
+  font-weight: 700;
+
+  &--ghost {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: transparent;
+    color: var(--px-white);
+  }
+}
+
+.narrative {
+  .lead {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.15rem;
+    line-height: 1.75;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.detail-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.detail-card {
+  padding: 1.35rem;
+
+  h3 {
+    margin: 0 0 0.85rem;
+    color: var(--px-white);
+    font-size: 1.15rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  li + li {
+    margin-top: 0.55rem;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.badge {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 600;
+}

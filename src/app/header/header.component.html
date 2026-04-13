@@ -1,108 +1,35 @@
-<!-- Mob header -->
-<div class="mob-header">
-  <div class="mob-h-left">
-    <a class="navbar-brand" href="javascript:">
-      <span class="header-brand-name">Hung Pham.</span>
+<header class="site-header" [class.menu-open]="sidebarOpen">
+  <div class="container header-shell">
+    <a class="brand" href="#home" (click)="fullPageScroll('home')" aria-label="Go to home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">{{ brandName }}</span>
     </a>
-  </div>
-  <div class="mob-h-right" (clickOutside)="onClickedOutside($event)">
+
     <button
-      class="toggler-menu"
-      [ngClass]="{ open: sidebarOpen }"
+      type="button"
+      class="nav-toggle"
+      [class.open]="sidebarOpen"
+      [attr.aria-expanded]="sidebarOpen"
+      aria-controls="main-menu"
+      aria-label="Toggle navigation menu"
       (click)="toggleMenu()"
     >
-      <span></span>
+      <span aria-hidden="true"></span>
     </button>
+
+    <nav id="main-menu" class="nav-links" [class.is-open]="sidebarOpen" aria-label="Primary">
+      <a
+        *ngFor="let link of links; trackBy: trackById"
+        class="nav-link"
+        [class.active]="currentSection === link.id"
+        [attr.aria-current]="currentSection === link.id ? 'page' : null"
+        [href]="'#' + link.id"
+        (click)="fullPageScroll(link.id)"
+      >
+        {{ link.label }}
+      </a>
+
+      <a class="resume-link" [href]="resumeUrl" download (click)="closeMenu()">Resume</a>
+    </nav>
   </div>
-</div>
-<!-- End -->
-<!-- Header Top -->
-<div
-  class="header-left-fixed one-page-nav"
-  [ngClass]="{ 'menu-open menu-open-desk': sidebarOpen }"
->
-  <!-- Brand -->
-  <div class="logo">
-    <a class="navbar-brand" href="javascript:">
-      <span class="header-brand-name">Hung Pham.</span>
-    </a>
-  </div>
-  <!-- / -->
-  <ul class="main-menu">
-    <li>
-      <a
-        class="menu-item"
-        spyOn="home"
-        activeClass="active"
-        href="#home"
-        (click)="fullPageScroll('home')"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        class="menu-item"
-        spyOn="about"
-        activeClass="active"
-        href="#about"
-        (click)="fullPageScroll('about')"
-      >
-        About
-      </a>
-    </li>
-    <li>
-      <a
-        class="menu-item"
-        spyOn="services"
-        activeClass="active"
-        href="#services"
-        (click)="fullPageScroll('services')"
-      >
-        Experience
-      </a>
-    </li>
-    <li>
-      <a
-        class="menu-item"
-        spyOn="work"
-        activeClass="active"
-        href="#work"
-        (click)="fullPageScroll('work')"
-      >
-        Portfolio
-      </a>
-    </li>
-    <li>
-      <a
-        class="menu-item"
-        spyOn="contact"
-        activeClass="active"
-        href="#contact"
-        (click)="fullPageScroll('contact')"
-      >
-        Contact
-      </a>
-    </li>
-  </ul>
-  <ul class="nav social-link">
-    <li>
-      <a href="https://github.com/phamhungptithcm" target="_blank"
-        ><i class="fab fa-github"></i
-      ></a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/in/hunpham/details/experience/"
-        target="_blank"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-    </li>
-    <li>
-      <a href="https://www.facebook.com/hawaihouu/" target="_blank"
-        ><i class="fab fa-facebook"></i
-      ></a>
-    </li>
-  </ul>
-</div>
-<!-- End Header Top -->
+</header>

@@ -1,15 +1,129 @@
-.hp-company {
-  font-size: 12px;
-  border-radius: 5px;
-  background-color: var(--px-dark);
-  padding: 2.5px;
-  margin-top: 0px;
-  width: fit-content;
-  color: var(--px-theme);
+.experience {
+  color: rgba(255, 255, 255, 0.8);
 }
-.r-meta {
-  margin-top: 10px;
+
+.section-copy {
+  max-width: 48rem;
+  margin: 0.8rem 0 0;
+  color: rgba(255, 255, 255, 0.66);
 }
-.resume-box h5 {
-  font-size: 20px;
+
+.experience-grid {
+  display: grid;
+  gap: 1.4rem;
+
+  @media (min-width: 1080px) {
+    grid-template-columns: minmax(240px, 0.4fr) minmax(0, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+.experience-lead {
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.lead-stat {
+  margin: 0;
+  color: var(--px-white);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.lead-copy {
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 46px;
+  margin-top: 1.25rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffe6bc, #cf9c70);
+  color: #171717;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.resume-box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-item {
+  padding: 1.4rem;
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+
+  & + .resume-item {
+    margin-top: 1rem;
+  }
+}
+
+.resume-item-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.role {
+  margin: 0;
+  color: var(--px-white);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.company,
+.dates,
+.tenure {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.bullets {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+
+  li + li {
+    margin-top: 0.55rem;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.15rem;
+}
+
+.badge {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 600;
 }

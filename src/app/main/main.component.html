@@ -1,54 +1,54 @@
-<main class="wrapper" id="scroll-container">
-  <section id="home" spyTarget="home" class="spy-section home-section bg-dark">
+<main class="wrapper" id="scroll-container" role="main">
+  <section id="home" class="spy-section home-section" aria-label="Home">
     <app-home></app-home>
   </section>
 
-  <section
-    id="about"
-    spyTarget="about"
-    class="spy-section section about-section"
-  >
-    <app-about></app-about>
-  </section>
-
-  <section class="section experience-section bg-g">
-    <app-experience></app-experience>
-  </section>
-
-  <section
-    id="services"
-    spyTarget="services"
-    class="spy-section section services-section bg-dark"
-  >
-    <app-services></app-services>
-  </section>
-
-  <section id="work" spyTarget="work" class="spy-section section work-section">
+  <section id="work" class="spy-section section work-section" aria-label="Case Studies">
     <app-work></app-work>
   </section>
 
-  <section
-    id="contact"
-    spyTarget="contact"
-    class="spy-section section contact-section"
-  >
+  <section id="experience" class="spy-section section experience-section" aria-label="Experience">
+    <app-experience></app-experience>
+  </section>
+
+  <section id="services" class="spy-section section services-section" aria-label="What I Lead">
+    <app-services></app-services>
+  </section>
+
+  <section id="about" class="spy-section section about-section" aria-label="About">
+    <app-about></app-about>
+  </section>
+
+  <section id="contact" class="spy-section section contact-section" aria-label="Contact">
     <app-contact></app-contact>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-info">
-        <div class="footer-avatar">
-          <img src="assets/img/avatar/avatar.JPEG" title="" alt="" />
-        </div>
-        <h6>Hung Pham</h6>
+  <footer class="site-footer" aria-label="Footer">
+    <div class="container footer-shell">
+      <div>
+        <p class="footer-brand">Hung Pham</p>
+        <p class="footer-copy">Senior Java engineer focused on backend platforms, distributed systems, and reliable delivery.</p>
       </div>
-      <p class="copyright">© 2024 copyright all right reserved</p>
+
+      <div class="footer-links">
+        <a href="mailto:phamhung.working@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/hunpham/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/phamhungptithcm" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+
+      <p class="footer-meta">© {{ currentYear }} Hung Pham</p>
     </div>
   </footer>
-  <a href="#home" id="return-to-top"><i class="bi-arrow-up-circle-fill"></i></a>
-  <!-- End Footer -->
-</main>
 
-<!-- End All Snigle Projects -->
+  <button
+    id="return-to-top"
+    type="button"
+    class="return-to-top"
+    title="Back to top"
+    aria-label="Back to top"
+    (click)="scrollToTop()"
+    [class.visible]="showBackToTop"
+  >
+    <i class="bi-arrow-up-circle-fill" aria-hidden="true"></i>
+  </button>
+</main>

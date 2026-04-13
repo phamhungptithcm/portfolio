@@ -1,0 +1,134 @@
+.work {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-copy {
+  max-width: 48rem;
+  margin: 0.8rem 0 0;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.case-studies {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.case-study {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 230, 188, 0.12), transparent 26%),
+    rgba(255, 255, 255, 0.03);
+
+  @media (min-width: 1080px) {
+    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+    gap: 1.8rem;
+  }
+
+  &--reverse {
+    @media (min-width: 1080px) {
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    }
+  }
+}
+
+.case-study__lead {
+  h3 {
+    margin: 0.35rem 0 0;
+    color: var(--px-white);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+}
+
+.case-study__kicker {
+  margin: 0;
+  color: rgba(255, 230, 188, 0.78);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.case-study__summary {
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.case-study__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.case-study__action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--px-white);
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.case-study__detail {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-row {
+  padding: 1rem 1rem 1.05rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+
+  p {
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  li + li {
+    margin-top: 0.5rem;
+  }
+}
+
+.detail-label {
+  margin-bottom: 0.45rem !important;
+  color: rgba(255, 230, 188, 0.78);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.badge {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 230, 188, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 600;
+}
