@@ -38,8 +38,8 @@
       </p>
 
       <div class="action-row">
-        <a class="px-btn" [href]="resumeUrl" download (click)="track('about_resume')">Resume</a>
-        <a class="px-btn px-btn--ghost" [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" (click)="track('about_linkedin')">
+        <a class="px-btn" [href]="resumeUrl" download (click)="track('about_resume', resumeUrl)">Resume</a>
+        <a class="px-btn px-btn--ghost" [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" (click)="track('about_linkedin', linkedinUrl)">
           LinkedIn
         </a>
       </div>

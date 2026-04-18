@@ -25,7 +25,7 @@
         [href]="action.href"
         [attr.target]="action.external ? '_blank' : null"
         [attr.rel]="action.external ? 'noopener noreferrer' : null"
-        (click)="track(action.event)"
+        (click)="track(action.event, action.href)"
       >
         <span class="contact-card__label">{{ action.label }}</span>
         <span class="contact-card__value">{{ action.value }}</span>

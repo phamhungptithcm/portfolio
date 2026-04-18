@@ -21,7 +21,7 @@
             [href]="action.href"
             target="_blank"
             rel="noopener noreferrer"
-            (click)="track(action.event)"
+            (click)="track(action.event, project.id, action.href)"
           >
             {{ action.label }}
           </a>

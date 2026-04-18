@@ -1,6 +1,6 @@
 <header class="site-header" [class.menu-open]="sidebarOpen">
   <div class="container header-shell">
-    <a class="brand" href="#home" (click)="fullPageScroll('home')" aria-label="Go to home">
+    <a class="brand" href="#home" (click)="onBrandClick()" aria-label="Go to home">
       <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-name">{{ brandName }}</span>
     </a>
@@ -24,12 +24,12 @@
         [class.active]="currentSection === link.id"
         [attr.aria-current]="currentSection === link.id ? 'page' : null"
         [href]="'#' + link.id"
-        (click)="fullPageScroll(link.id)"
+        (click)="onNavClick(link.id)"
       >
         {{ link.label }}
       </a>
 
-      <a class="resume-link" [href]="resumeUrl" download (click)="closeMenu()">Resume</a>
+      <a class="resume-link" [href]="resumeUrl" download (click)="onResumeClick()">Resume</a>
     </nav>
   </div>
 </header>

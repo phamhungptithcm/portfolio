@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../../core/analytics/portfolio-analytics.service';
+
 type ContactAction = {
   label: string;
   value: string;
@@ -56,8 +58,15 @@ export class ContactComponent {
     return `mailto:${this.email}`;
   }
 
-  track(_: string): void {
-    // Hook for analytics.
+  constructor(private readonly analytics: PortfolioAnalyticsService) {}
+
+  track(actionId: string, target?: string): void {
+    if (actionId === 'contact_resume') {
+      this.analytics.trackResumeDownload('contact');
+      return;
+    }
+
+    this.analytics.trackContactClick(actionId, target);
   }
 
   get contactJsonLd(): string {

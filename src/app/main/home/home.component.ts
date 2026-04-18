@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../../core/analytics/portfolio-analytics.service';
+
 type ProofMetric = {
   value: string;
   label: string;
@@ -59,8 +61,15 @@ export class HomeComponent {
     return `mailto:${this.email}`;
   }
 
-  track(_: string): void {
-    // Hook for analytics.
+  constructor(private readonly analytics: PortfolioAnalyticsService) {}
+
+  track(actionId: string, target?: string): void {
+    if (actionId === 'cta_download_resume') {
+      this.analytics.trackResumeDownload('home');
+      return;
+    }
+
+    this.analytics.trackCtaClick(actionId, 'home', target);
   }
 
   trackByLabel(_: number, item: ProofMetric): string {

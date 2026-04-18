@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../../core/analytics/portfolio-analytics.service';
+
 type ProjectAction = {
   label: string;
   href: string;
@@ -140,8 +142,10 @@ export class WorkComponent {
     }
   ];
 
-  track(_: string): void {
-    // Hook for analytics.
+  constructor(private readonly analytics: PortfolioAnalyticsService) {}
+
+  track(actionId: string, projectId: string, target?: string): void {
+    this.analytics.trackCaseStudyClick(actionId, projectId, target);
   }
 
   trackById(_: number, item: Project): string {

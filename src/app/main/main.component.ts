@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, EventEmitter, HostListener, OnDestroy, Output } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../core/analytics/portfolio-analytics.service';
+
 type SectionId = 'home' | 'work' | 'experience' | 'services' | 'about' | 'contact' | string;
 
 @Component({
@@ -17,6 +19,8 @@ export class MainComponent implements AfterViewInit, OnDestroy {
   private sectionIds: SectionId[] = ['home', 'work', 'experience', 'services', 'about', 'contact'];
   private prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
+  constructor(private readonly analytics: PortfolioAnalyticsService) {}
+
   ngAfterViewInit(): void {
     this.setupObserver();
     this.observeSections();
@@ -28,6 +32,7 @@ export class MainComponent implements AfterViewInit, OnDestroy {
   }
 
   scrollToTop(): void {
+    this.analytics.trackNavClick('home', 'back_to_top');
     document.getElementById('home')?.scrollIntoView({
       behavior: this.prefersReduced ? 'auto' : 'smooth',
       block: 'start'
@@ -67,6 +72,7 @@ export class MainComponent implements AfterViewInit, OnDestroy {
       const id = visible?.target?.id as SectionId | undefined;
       if (id) {
         this.sectionChange.emit(id);
+        this.analytics.trackSectionView(id);
       }
     }, {
       root: null,

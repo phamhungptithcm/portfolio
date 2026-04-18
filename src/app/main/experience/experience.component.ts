@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../../core/analytics/portfolio-analytics.service';
+
 type Role = {
   title: string;
   company: string;
@@ -17,6 +19,8 @@ type Role = {
 })
 export class ExperienceComponent {
   resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
+
+  constructor(private readonly analytics: PortfolioAnalyticsService) {}
 
   roles: Role[] = [
     {
@@ -60,8 +64,10 @@ export class ExperienceComponent {
     }
   ];
 
-  track(_: string): void {
-    // Hook for analytics.
+  track(actionId: string): void {
+    if (actionId === 'resume_download') {
+      this.analytics.trackResumeDownload('experience');
+    }
   }
 
   trackByCompany(_: number, role: Role): string {

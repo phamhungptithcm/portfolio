@@ -24,6 +24,40 @@ This is the source code for Hung Pham's portfolio website. It's built with Angul
 
 To build the project for production, run `npm run build`. This will create a `dist/` directory with the compiled assets.
 
+## Firebase Analytics Tracking
+
+The portfolio now sends Firebase / GA4 events for:
+
+- landing visits
+- section views
+- nav clicks
+- CTA clicks
+- case-study clicks
+- contact clicks
+- resume downloads
+
+GA4 can show country, city, source / medium, device, browser, and engagement automatically.
+
+If you want visitor context such as recruiter type, company, or target role, generate a tracked link and send that link directly in outreach:
+
+```bash
+npm run link:portfolio -- \
+  --viewer-type recruiter \
+  --company Stripe \
+  --job-title "Staff Platform Engineer" \
+  --utm-source linkedin \
+  --utm-medium dm \
+  --utm-campaign staff_platform_outreach
+```
+
+Example output:
+
+```text
+https://hunpeo.web.app/?viewer_type=recruiter&company=Stripe&job_title=Staff+Platform+Engineer&utm_source=linkedin&utm_medium=dm&utm_campaign=staff_platform_outreach
+```
+
+Important: GA4 cannot automatically know a visitor's real job title from the browser. That value must come from a tracked link or another explicit user input flow.
+
 ## Contributing
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.

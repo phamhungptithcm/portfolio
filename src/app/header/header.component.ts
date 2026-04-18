@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, Input, OnDestroy, Renderer2 } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../core/analytics/portfolio-analytics.service';
+
 type NavLink = { id: string; label: string };
 
 @Component({
@@ -24,7 +26,11 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   private observer?: IntersectionObserver;
 
-  constructor(private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) {}
+  constructor(
+    private readonly elementRef: ElementRef<HTMLElement>,
+    private readonly renderer: Renderer2,
+    private readonly analytics: PortfolioAnalyticsService
+  ) {}
 
   ngAfterViewInit(): void {
     const prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
@@ -78,6 +84,21 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
       el.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
     }
 
+    this.closeMenu();
+  }
+
+  onBrandClick(): void {
+    this.analytics.trackNavClick('home', 'header_brand');
+    this.fullPageScroll('home');
+  }
+
+  onNavClick(sectionId: string): void {
+    this.analytics.trackNavClick(sectionId, 'header_nav');
+    this.fullPageScroll(sectionId);
+  }
+
+  onResumeClick(): void {
+    this.analytics.trackResumeDownload('header');
     this.closeMenu();
   }
 

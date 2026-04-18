@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { PortfolioAnalyticsService } from '../../core/analytics/portfolio-analytics.service';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -50,8 +52,15 @@ export class AboutComponent {
     'Observability'
   ];
 
-  track(_: string): void {
-    // Hook for analytics.
+  constructor(private readonly analytics: PortfolioAnalyticsService) {}
+
+  track(actionId: string, target?: string): void {
+    if (actionId === 'about_resume') {
+      this.analytics.trackResumeDownload('about');
+      return;
+    }
+
+    this.analytics.trackCtaClick(actionId, 'about', target);
   }
 
   get personJsonLd(): string {

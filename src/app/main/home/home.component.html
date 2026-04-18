@@ -13,13 +13,13 @@
       </p>
 
       <div class="btn-bar">
-        <a class="px-btn px-btn--primary" [href]="resumeUrl" download (click)="track('cta_download_resume')">
+        <a class="px-btn px-btn--primary" [href]="resumeUrl" download (click)="track('cta_download_resume', resumeUrl)">
           Download Resume <i class="bi-download" aria-hidden="true"></i>
         </a>
-        <a class="px-btn px-btn--ghost" href="#work" (click)="track('cta_view_work')">
+        <a class="px-btn px-btn--ghost" href="#work" (click)="track('cta_view_work', '#work')">
           View Case Studies <i class="bi-arrow-up-right" aria-hidden="true"></i>
         </a>
-        <a class="px-btn px-btn--ghost" [href]="mailtoHref" (click)="track('cta_email')">
+        <a class="px-btn px-btn--ghost" [href]="mailtoHref" (click)="track('cta_email', mailtoHref)">
           Email Me <i class="bi-envelope" aria-hidden="true"></i>
         </a>
       </div>
@@ -46,7 +46,7 @@
           [href]="link.href"
           [attr.target]="link.external ? '_blank' : null"
           [attr.rel]="link.external ? 'noopener noreferrer' : null"
-          (click)="track(link.event)"
+          (click)="track(link.event, link.href)"
         >
           {{ link.label }}
         </a>
