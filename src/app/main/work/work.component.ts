@@ -29,27 +29,25 @@ type Project = {
 export class WorkComponent {
   projects: Project[] = [
     {
-      id: 'tolling-platform',
-      badge: 'Enterprise Platform',
-      title: 'Tolling Management System',
-      summary: 'Shared identity and data plane across CRM, fulfillment, and consumer tolling products.',
-      problem: 'Separate operational surfaces created duplicated identity flows, fragmented back-office work, and slower change management across tolling workflows.',
-      role: 'Senior engineer responsible for secure identity, service boundaries, platform design, and delivery quality across multiple tolling surfaces.',
+      id: 'be-ai-heart',
+      badge: 'AI Infrastructure',
+      title: 'BeHeart: Persistent Context Layer for AI Coding',
+      summary: 'A local-first CLI and MCP product that gives AI coding tools reusable project memory instead of forcing every session to relearn the repo.',
+      problem: 'AI coding tools lose context between sessions, burn tokens restating the same project knowledge, and miss existing code paths when teams use them inside real repositories.',
+      role: 'Product owner and engineer responsible for product strategy, architecture, CLI/MCP workflows, document-aware memory, policy direction, and benchmark framing.',
       solution: [
-        'Designed multi-service architecture with Spring Boot, centralized authentication, and reusable service boundaries.',
-        'Introduced event-driven integration patterns with Kafka, Redis, and Elasticsearch for search, state propagation, and operational visibility.',
-        'Aligned backend platform work with Angular product surfaces so ops teams could use the system effectively, not just technically.'
+        'Designed a scanner, symbol extractor, project graph, context compiler, policy engine, CLI, MCP server, and benchmark workflow.',
+        'Added document-aware memory so product requirements, architecture notes, and implementation intent can be retrieved alongside code.',
+        'Shaped the product around cost-aware AI workflows for teams using Codex, Cursor, Claude Code, Copilot, or internal agent tools.'
       ],
       impact: [
-        'Established a cleaner platform model for tolling operations with reusable authentication and clearer ownership boundaries.',
-        'Made releases easier to reason about by standardizing service contracts, delivery flows, and production diagnostics.',
-        'Turned a multi-surface product into something closer to a coherent platform instead of isolated applications.'
+        'Shows senior product architecture in a high-leverage applied AI problem space: reusable context, agent guardrails, and delivery consistency.',
+        'Demonstrates depth across developer tooling, local-first execution, MCP integration, graph-oriented retrieval, and benchmark strategy.',
+        'Positions AI work as infrastructure for engineering teams rather than a thin wrapper around model calls.'
       ],
-      stack: ['Java 17+', 'Spring Boot', 'Kafka', 'Redis', 'Elasticsearch', 'Angular', 'Docker', 'Kubernetes'],
+      stack: ['Node.js', 'TypeScript', 'CLI', 'MCP', 'Project Graph', 'Policy Engine', 'Benchmarks'],
       actions: [
-        { label: 'CRM Demo', href: 'https://beaus-crm-v1.web.app/', event: 'project_tolling_crm' },
-        { label: 'Fulfillment Demo', href: 'https://beaus-fulfillment-v1.web.app/fulfillment', event: 'project_tolling_fulfillment' },
-        { label: 'Online Demo', href: 'https://beaus-online-v1.web.app/', event: 'project_tolling_online' }
+        { label: 'Repository', href: 'https://github.com/phamhungptithcm/be-ai-heart', event: 'project_beheart_repo' }
       ]
     },
     {
@@ -72,6 +70,29 @@ export class WorkComponent {
       stack: ['TypeScript', 'Chrome Extension', 'Applied AI', 'Prompt Quality', 'Privacy Guardrails', 'MkDocs'],
       actions: [
         { label: 'Repository', href: 'https://github.com/phamhungptithcm/ai-dev-coach', event: 'project_ai_dev_coach_repo' }
+      ]
+    },
+    {
+      id: 'gig',
+      badge: 'Developer Tooling',
+      title: 'gig: Ticket-aware Release Verification CLI',
+      summary: 'A remote-first Go CLI that answers whether every change for a ticket actually made it into a release.',
+      problem: 'Release day slows down when teams have to manually reconcile tickets across commits, branches, pull requests, deployments, checks, linked work, and release notes.',
+      role: 'Product owner and engineer responsible for product framing, provider workflows, CLI UX, release evidence modeling, packaging, docs, and demo assets.',
+      solution: [
+        'Built inspect, verify, and packet workflows that return deterministic release decisions such as ready, needs review, blocked, or unknown.',
+        'Designed remote-first provider support for GitHub, GitLab, Bitbucket, Azure DevOps, and SVN while preserving zero-config local checkout mode.',
+        'Added release exports for QA, release managers, and compliance reviewers through XLSX, CSV, JSON, and terminal-friendly human output.'
+      ],
+      impact: [
+        'Turns ticket reconciliation into a repeatable release-audit workflow instead of tribal knowledge.',
+        'Shows end-to-end product ownership across CLI ergonomics, provider integrations, packaging, documentation, and demo strategy.',
+        'Creates strong public proof for developer productivity tooling, release governance, and operationally useful automation.'
+      ],
+      stack: ['Go', 'CLI UX', 'GitHub', 'GitLab', 'Azure DevOps', 'XLSX', 'Release Automation'],
+      actions: [
+        { label: 'Repository', href: 'https://github.com/phamhungptithcm/gig', event: 'project_gig_repo' },
+        { label: 'Docs', href: 'https://phamhungptithcm.github.io/gig/', event: 'project_gig_docs' }
       ]
     },
     {
@@ -98,47 +119,48 @@ export class WorkComponent {
       ]
     },
     {
-      id: 'gig',
-      badge: 'Independent Product',
-      title: 'gig: Ticket-aware Release Verification CLI',
-      summary: 'A Go CLI for teams that need to verify ticket completeness before promoting code across branches or environments.',
-      problem: 'In multi-repo delivery environments, ticket-related changes are easy to miss, and release readiness often lives in tribal knowledge rather than a repeatable workflow.',
-      role: 'Product owner and engineer responsible for product framing, CLI design, release workflow modeling, packaging, and public documentation.',
+      id: 'beaus-tolling',
+      badge: 'Tolling Backoffice Platform',
+      title: 'Beaus Tolling Backoffice',
+      summary: 'A modular tolling operations monorepo for CRM, case management, fulfillment, configuration, reporting, payments, identity, and customer self-service.',
+      problem: 'Tolling operators need to modernize backoffice workflows without risky monolithic replacement programs, while still integrating with roadside, payments, DMV, reporting, and agency ecosystems.',
+      role: 'Platform architect and product engineer shaping the repository model, bounded contexts, service portfolio, UI portfolio, integration contracts, and strategic documentation pack.',
       solution: [
-        'Built a Go CLI that inspects repo history, verifies ticket completeness, and generates release packets for QA and release managers.',
-        'Designed the tool around operational questions teams actually ask instead of generic Git abstractions.',
-        'Published docs, installers, and release flows that make the project usable beyond the repo itself.'
+        'Split the platform into clear backoffice domains including account, vehicle, trip, case, payment, notification, DMV, batch, report, core, and SSO services.',
+        'Defined Angular application surfaces for CRM, fulfillment, case management, configuration, reporting, and online customer workflows.',
+        'Established OpenAPI and AsyncAPI contracts, Kafka integration patterns, PostgreSQL-per-service ownership, Redis sessions, and Kubernetes runtime direction.'
       ],
       impact: [
-        'Turned release coordination into a workflow engineers and delivery stakeholders can inspect and trust.',
-        'Shows end-to-end ownership across problem framing, implementation, docs, packaging, and distribution.',
-        'Provides stronger public proof of product thinking than a standard portfolio demo repo.'
+        'Demonstrates staff-level system thinking across commercial modularity, operational reliability, integration freedom, and enterprise governance.',
+        'Turns earlier tolling demo work into a more credible product platform with architecture, operating model, roadmap, security, and release governance.',
+        'Strengthens backend/platform positioning with a domain-rich enterprise system rather than isolated UI demos.'
       ],
-      stack: ['Go', 'Git tooling', 'CLI UX', 'Release automation', 'Homebrew', 'Scoop'],
+      stack: ['Java 21', 'Spring Boot', 'Angular 17', 'Kafka', 'PostgreSQL', 'Redis', 'Kubernetes', 'OpenAPI'],
       actions: [
-        { label: 'Repository', href: 'https://github.com/phamhungptithcm/gig', event: 'project_gig_repo' },
-        { label: 'Docs', href: 'https://phamhungptithcm.github.io/gig/', event: 'project_gig_docs' }
+        { label: 'Repository', href: 'https://github.com/phamhungptithcm/beaus-tolling', event: 'project_beaus_tolling_repo' }
       ]
     },
     {
-      id: 'transportation-programs',
-      badge: 'Production Operations',
-      title: 'Transportation and Tolling Programs',
-      summary: 'Architecture, diagnostics, and delivery work across OCTA, ORB, KDOT, E-470, and related transportation systems.',
-      problem: 'Multiple tolling programs needed secure identity, reliable back-office workflows, and faster diagnosis when incidents affected live operations.',
-      role: 'Senior engineer working across system design, performance debugging, observability improvements, and operator-facing delivery for transportation clients and internal teams.',
+      id: 'beaus-tolling-roadside',
+      badge: 'Roadside Ingestion Platform',
+      title: 'Beaus Tolling Roadside',
+      summary: 'A separate roadside platform for low-latency lane event ingest, field-device state, image evidence, and evidence-ready Kafka publication.',
+      problem: 'Roadside capture and device operations have different latency, reliability, and release needs than backoffice case, payment, and operator workflows.',
+      role: 'Platform architect and engineer responsible for service boundaries, ingest architecture, event contracts, reliability posture, and repository separation from backoffice domains.',
       solution: [
-        'Improved service design, deployment automation, and production diagnostics across Java and Angular systems.',
-        'Investigated connection leaks, memory issues, deadlocks, and latency hotspots using operational telemetry and runtime analysis.',
-        'Partnered with product and design stakeholders to improve operator usability without losing architectural discipline.'
+        'Defined lane-event-ingest, device-management, and image-evidence services around raw capture, telemetry, evidence lifecycle, and downstream event publication.',
+        'Kept roadside independent from backoffice release cycles while connecting the systems through Kafka events, signed APIs, and shared contract governance.',
+        'Designed for burst-heavy traffic, asynchronous handoff, failure-domain isolation, and sustained ingest throughput.'
       ],
       impact: [
-        'Reduced incident resolution time by about 50% through better instrumentation, runbooks, and post-mortem discipline.',
-        'Improved production visibility and release confidence across systems with real operational consequences.',
-        'Demonstrated senior-level ownership beyond a single feature team by operating across products, clients, and incident paths.'
+        'Shows domain-aware architecture for edge ingestion and operational reliability in a high-throughput transportation environment.',
+        'Makes the backoffice platform more credible by separating raw capture and device telemetry from operator-facing workflows.',
+        'Demonstrates event-driven integration discipline without shared schemas or tightly coupled database access.'
       ],
-      stack: ['Java', 'Spring', 'Angular', 'AppDynamics', 'AWS', 'Kafka', 'Redis', 'Elasticsearch'],
-      actions: []
+      stack: ['Java', 'Spring Boot', 'Kafka', 'AsyncAPI', 'Kubernetes', 'Device Telemetry', 'Image Evidence'],
+      actions: [
+        { label: 'Repository', href: 'https://github.com/phamhungptithcm/beaus-tolling-roadside', event: 'project_beaus_roadside_repo' }
+      ]
     }
   ];
 

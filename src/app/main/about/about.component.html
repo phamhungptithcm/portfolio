@@ -15,15 +15,25 @@
   <div class="about-grid">
     <aside class="identity-card">
       <div class="about-avatar">
-        <img
-          [src]="avatarUrl"
-          [alt]="name"
-          loading="lazy"
-          width="320"
-          height="320"
-          decoding="async"
-          itemprop="image"
-        />
+        <picture>
+          <source
+            [attr.srcset]="avatarWebpSrcset"
+            sizes="(min-width: 1080px) 320px, calc(100vw - 3rem)"
+            type="image/webp"
+          />
+          <img
+            [src]="avatarUrl"
+            [attr.srcset]="avatarJpegSrcset"
+            sizes="(min-width: 1080px) 320px, calc(100vw - 3rem)"
+            [alt]="name"
+            loading="eager"
+            fetchpriority="high"
+            width="640"
+            height="640"
+            decoding="async"
+            itemprop="image"
+          />
+        </picture>
       </div>
 
       <h3 class="name" itemprop="name">{{ name }}</h3>
@@ -48,7 +58,7 @@
     <div class="narrative">
       <p class="lead">
         I build backend platforms, AI-assisted developer tools, and product systems where uptime, latency, security, and workflow clarity have real business impact.
-        Across FPT Americas, transportation programs, and independent product work like AI Dev Coach, BeFam, and gig, I have led service design, observability improvements, and delivery systems that make products easier to ship and easier to run.
+        Across FPT Americas, transportation programs, and product work like BeHeart, AI Dev Coach, gig, BeFam, and Beaus Tolling, I have led service design, observability improvements, and delivery systems that make products easier to ship and easier to run.
       </p>
 
       <p>

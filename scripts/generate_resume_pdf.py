@@ -19,17 +19,18 @@ SOFT = colors.HexColor("#f4f6f8")
 
 
 SUMMARY = (
-    "Senior platform and applied AI engineer with 7+ years building cloud-native Java systems, "
-    "developer tooling, and product foundations that teams can support in production. Strongest "
-    "in Spring Boot platforms, observability, distributed systems, and practical AI workflow design."
+    "Senior platform and applied AI engineer with 8+ years building cloud-native Java systems, "
+    "AI engineering tools, release automation, and product foundations that teams can support in "
+    "production. Strongest in Spring Boot platforms, MCP-style developer workflows, observability, "
+    "distributed systems, and practical applied AI product design."
 )
 
 
 CORE_STRENGTHS = [
     "Spring Boot microservices, event-driven integration, APIs, and platform boundaries.",
-    "Applied AI product design with prompt quality scoring, privacy guardrails, and browser-based developer tooling.",
-    "Mobile and web product foundations with Flutter, Firebase, Angular, and operational documentation.",
-    "Reliability engineering through observability, diagnostics, release automation, and mentoring."
+    "Applied AI infrastructure with persistent repo memory, prompt quality scoring, privacy guardrails, and MCP workflows.",
+    "Mobile, web, and tolling platform foundations with Flutter, Firebase, Angular, Kafka, and operational documentation.",
+    "Reliability engineering through observability, diagnostics, release automation, and mentorship."
 ]
 
 
@@ -42,8 +43,7 @@ EXPERIENCE = [
         "bullets": [
             "Led backend and platform delivery across tolling and payments workstreams with secure identity, operator workflows, and multi-service coordination.",
             "Reduced incident resolution time by about 50% using AppDynamics, heap and thread analysis, stronger diagnostics, and post-mortem follow-through.",
-            "Improved checkout latency by about 35% with caching, asynchronous payment flows, and cleaner service orchestration.",
-            "Mentored engineers, ran code reviews, and raised API and release standards across teams shipping production-critical systems."
+            "Improved checkout latency by about 35% with caching and asynchronous payment flows while raising API, review, and release standards."
         ]
     },
     {
@@ -53,8 +53,7 @@ EXPERIENCE = [
         "period": "2021 - 2022",
         "bullets": [
             "Delivered payment and platform features with maintainable service design, secure token flows, and safer release paths.",
-            "Introduced centralized logging and diagnostic improvements that shortened defect triage and tightened support feedback loops.",
-            "Interviewed and mentored engineers while enforcing review standards for scalable, maintainable Java services."
+            "Introduced logging, diagnostics, mentoring, and review standards that shortened support feedback loops and improved maintainability."
         ]
     },
     {
@@ -64,8 +63,7 @@ EXPERIENCE = [
         "period": "2018 - 2021",
         "bullets": [
             "Built core modules across authentication, catalog, order, notification, and search flows in enterprise applications.",
-            "Improved search and data performance with Elasticsearch, SQL tuning, and indexing on high-value user paths.",
-            "Shipped full-stack features across Java services, AWS integrations, and frontend components while building a strong foundation in cross-functional delivery."
+            "Improved search and data performance with Elasticsearch, SQL tuning, indexing, AWS integrations, and frontend delivery."
         ]
     }
 ]
@@ -73,27 +71,45 @@ EXPERIENCE = [
 
 PROJECTS = [
     {
+        "title": "BeHeart",
+        "subtitle": "Persistent context layer for AI coding",
+        "bullets": [
+            "Designed CLI, MCP, project graph, policy engine, context compiler, document memory, and benchmark workflows so AI tools can reuse project knowledge instead of relearning each repo."
+        ]
+    },
+    {
         "title": "AI Dev Coach",
         "subtitle": "Applied AI product",
         "bullets": [
-            "Built a Chrome extension that coaches developers to use ChatGPT, Claude, Gemini, Grok, and DeepSeek without skipping reasoning and debugging habits.",
-            "Shipped a role-aware prompt builder, real-time prompt scoring, prompt linting, local sensitive-data redaction, and release-ready docs workflows."
+            "Built a Chrome extension with role-aware prompt building, real-time prompt scoring, prompt linting, local sensitive-data redaction, and enterprise policy support."
+        ]
+    },
+    {
+        "title": "gig",
+        "subtitle": "Ticket-aware release verification CLI",
+        "bullets": [
+            "Built a Go CLI that follows tickets across commits, branches, pull requests, deployments, checks, linked work, and release notes to produce release evidence packets."
         ]
     },
     {
         "title": "BeFam",
         "subtitle": "Mobile-first genealogy and clan operations platform",
         "bullets": [
-            "Built a Flutter and Firebase product with OTP authentication, genealogy workspaces, events, funds, join-request flows, and Store billing support.",
-            "Owned product docs, CI/CD, monitoring, and bilingual runbooks so the product operates as a system, not just an app codebase."
+            "Built a Flutter and Firebase product with OTP authentication, genealogy workspaces, events, funds, join-request flows, Store billing, docs, CI/CD, and monitoring."
         ]
     },
     {
-        "title": "gig",
-        "subtitle": "Release verification CLI",
+        "title": "Beaus Tolling Backoffice",
+        "subtitle": "Modular tolling operations platform",
         "bullets": [
-            "Built a Go CLI that verifies ticket completeness and generates release packets before promotion across branches and environments.",
-            "Owned product framing, CLI UX, documentation, installers, and release automation for a reusable public developer tool."
+            "Defined a Spring Boot and Angular platform with bounded services for SSO, account, vehicle, trip, case, payment, notification, DMV, batch, reporting, and customer self-service."
+        ]
+    },
+    {
+        "title": "Beaus Tolling Roadside",
+        "subtitle": "Low-latency roadside ingestion platform",
+        "bullets": [
+            "Separated roadside ingest, device telemetry, and image evidence workflows from backoffice releases using Kafka events, AsyncAPI contracts, and failure-domain isolation."
         ]
     }
 ]
@@ -101,9 +117,9 @@ PROJECTS = [
 
 SKILLS = {
     "Languages": "Java, Go, TypeScript, JavaScript, Dart, SQL",
-    "Platforms": "Spring Boot, Angular, Flutter, Firebase, Kafka, Redis, Elasticsearch",
+    "Platforms": "Spring Boot, Angular, Flutter, Firebase, Kafka, Redis, Elasticsearch, MCP",
     "Cloud and Ops": "AWS, Kubernetes, Docker, AppDynamics, CI/CD, GitHub Actions",
-    "Applied AI": "Prompt quality systems, browser extensions, LLM workflow guardrails, privacy-minded prompt redaction"
+    "Applied AI": "AI context infrastructure, prompt quality systems, browser extensions, LLM workflow guardrails, privacy-minded prompt redaction"
 }
 
 
@@ -161,10 +177,10 @@ def build_styles():
             "Summary",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=9.5,
-            leading=14,
+            fontSize=9.2,
+            leading=13,
             textColor=TEXT,
-            spaceAfter=8,
+            spaceAfter=6,
         ),
         "meta": ParagraphStyle(
             "Meta",
@@ -195,21 +211,21 @@ def build_styles():
             "Body",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=9,
-            leading=13,
+            fontSize=8.8,
+            leading=12,
             textColor=TEXT,
         ),
         "bullet": ParagraphStyle(
             "Bullet",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=9,
-            leading=12.5,
+            fontSize=8.8,
+            leading=11.8,
             leftIndent=10,
             firstLineIndent=-10,
             bulletIndent=0,
             textColor=TEXT,
-            spaceAfter=2,
+            spaceAfter=1,
         ),
         "small": ParagraphStyle(
             "Small",
@@ -253,13 +269,13 @@ def role_block(item: dict[str, str | list[str]], styles: dict[str, ParagraphStyl
             ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
         ]),
     )
-    flowables = [header, *bullet_list(item["bullets"], styles), Spacer(1, 6)]
+    flowables = [header, *bullet_list(item["bullets"], styles), Spacer(1, 4)]
     return KeepTogether(flowables)
 
 
 def project_block(item: dict[str, str | list[str]], styles: dict[str, ParagraphStyle]) -> KeepTogether:
     title = Paragraph(f"{item['title']} - <font color='#9f5d34'>{item['subtitle']}</font>", styles["heading"])
-    flowables = [title, *bullet_list(item["bullets"], styles), Spacer(1, 6)]
+    flowables = [title, *bullet_list(item["bullets"], styles), Spacer(1, 4)]
     return KeepTogether(flowables)
 
 
@@ -278,8 +294,8 @@ def build_resume(output_path: Path) -> None:
         pagesize=LETTER,
         leftMargin=0.68 * inch,
         rightMargin=0.68 * inch,
-        topMargin=0.62 * inch,
-        bottomMargin=0.62 * inch,
+        topMargin=0.55 * inch,
+        bottomMargin=0.55 * inch,
         title="Hung Pham Resume",
         author="Hung Pham",
     )

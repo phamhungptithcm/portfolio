@@ -12,7 +12,9 @@ export class AboutComponent {
   title = 'Senior Platform / Applied AI Engineer';
   location = 'Dallas, Texas';
 
-  avatarUrl = 'assets/img/avatar/avatar.JPEG';
+  avatarUrl = 'assets/img/avatar/hung-pham-avatar-640.jpg';
+  avatarWebpSrcset = 'assets/img/avatar/hung-pham-avatar-320.webp 320w, assets/img/avatar/hung-pham-avatar-640.webp 640w';
+  avatarJpegSrcset = 'assets/img/avatar/hung-pham-avatar-320.jpg 320w, assets/img/avatar/hung-pham-avatar-640.jpg 640w';
   resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
   linkedinUrl = 'https://www.linkedin.com/in/hunpham/';
   email = 'phamhung.working@gmail.com';
@@ -20,7 +22,7 @@ export class AboutComponent {
 
   leverageAreas = [
     'Service boundaries, API contracts, and event-driven integration.',
-    'Applied AI workflows with prompt quality guardrails, local privacy checks, and behavior-aware UX.',
+    'Applied AI workflows with repo memory, prompt quality guardrails, local privacy checks, and behavior-aware UX.',
     'Production observability, incident response, and post-mortem follow-through.',
     'Mobile and operator-facing products that turn backend complexity into usable workflows.',
     'Cross-team delivery quality through reviews, standards, and mentorship.'
@@ -38,6 +40,7 @@ export class AboutComponent {
     'Spring Boot',
     'Microservices',
     'Applied AI',
+    'MCP',
     'AWS',
     'Kubernetes',
     'Kafka',
@@ -70,7 +73,7 @@ export class AboutComponent {
       name: this.name,
       jobTitle: this.title,
       address: this.location,
-      image: this.avatarUrl,
+      image: `${this.websiteUrl}${this.avatarUrl}`,
       email: this.email,
       url: this.websiteUrl,
       sameAs: [

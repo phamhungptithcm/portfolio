@@ -30,27 +30,28 @@ export class ServicesComponent {
     },
     {
       id: 'applied-ai',
-      kicker: 'Applied AI Products',
-      title: 'AI workflows with guardrails, feedback loops, and useful UX',
-      description: 'I build AI products that improve how people work, with prompt quality scoring, local safety checks, and interfaces that reinforce better behavior instead of blind copy-paste.',
+      kicker: 'AI Engineering Infrastructure',
+      title: 'AI workflows with memory, guardrails, and measurable context quality',
+      description: 'I build AI products that improve engineering work through reusable repo memory, prompt quality scoring, local safety checks, and interfaces that reinforce better behavior.',
       details: [
-        'Real-time prompt scoring and linter patterns for AI chat and copilot-style workflows.',
+        'Persistent codebase context and MCP workflows for AI tools that should not relearn the same repo every session.',
+        'Real-time prompt scoring and linter patterns for AI chat and copilot-style developer workflows.',
         'Local redaction and privacy-minded guardrails before prompts leave the browser.',
-        'Product framing that treats AI as workflow design, not just model integration.'
+        'Product framing that treats AI as workflow infrastructure, not just model integration.'
       ],
-      tags: ['Applied AI', 'Prompt Quality', 'Chrome Extension', 'TypeScript', 'LLM UX']
+      tags: ['Applied AI', 'MCP', 'Prompt Quality', 'Chrome Extension', 'TypeScript', 'LLM UX']
     },
     {
-      id: 'product-systems',
-      kicker: 'Product + Delivery Systems',
-      title: 'Mobile products and release systems teams can actually operate',
-      description: 'I turn product ideas into systems with identity, billing, docs, CI/CD, and monitoring so the product can survive beyond the first demo.',
+      id: 'enterprise-platforms',
+      kicker: 'Enterprise + Product Platforms',
+      title: 'Domain-rich systems teams can release, operate, and evolve',
+      description: 'I turn product ideas into systems with service boundaries, identity, billing, release governance, docs, CI/CD, and monitoring so the product can survive beyond the first demo.',
       details: [
+        'Tolling backoffice and roadside platforms split by domain, latency profile, and release cadence.',
         'Flutter and Firebase foundations for mobile-first products with secure access and operational workflows.',
-        'Release automation, health checks, and documentation that keep independent products maintainable.',
-        'Delivery standards that make multi-repo changes safer for product, QA, and support.'
+        'Release automation, health checks, and documentation that keep independent products maintainable.'
       ],
-      tags: ['Flutter', 'Firebase', 'CI/CD', 'Monitoring', 'Billing']
+      tags: ['Spring Boot', 'Kafka', 'Flutter', 'Firebase', 'CI/CD', 'Monitoring']
     }
   ];
 

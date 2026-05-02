@@ -26,15 +26,15 @@ export class HomeComponent {
   resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
 
   proofMetrics: ProofMetric[] = [
-    { value: '7+ years', label: 'shipping production systems' },
+    { value: '8+ years', label: 'shipping production systems' },
     { value: '~50%', label: 'faster incident resolution' },
-    { value: 'Applied AI', label: 'developer tooling with guardrails' }
+    { value: '6 repos', label: 'active product and platform portfolio' }
   ];
 
   outcomes = [
-    'Reduced incident resolution time by about 50% through observability, better diagnostics, and post-mortem discipline.',
-    'Built AI Dev Coach to improve prompt quality and reduce bad AI habits through real-time scoring, redaction, and coaching loops.',
-    'Built BeFam as a mobile-first clan operations product spanning Flutter, Firebase, billing, docs, and release workflows.'
+    'Built BeHeart and AI Dev Coach to improve AI-assisted engineering through persistent repo memory, prompt guardrails, and local-first workflows.',
+    'Built gig to turn ticket-to-release verification into deterministic evidence for QA, release managers, and engineering leads.',
+    'Shaped Beaus Tolling into separate backoffice and roadside platforms with bounded services, Kafka contracts, and operational documentation.'
   ];
 
   quickLinks: QuickLink[] = [
