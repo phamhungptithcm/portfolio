@@ -21,20 +21,21 @@ type QuickLink = {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-  roleEyebrow = 'Senior Platform / Applied AI Engineer';
+  roleEyebrow = 'Senior Platform, Payments & Applied AI Engineer';
   email = 'phamhung.working@gmail.com';
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260503';
 
   proofMetrics: ProofMetric[] = [
     { value: '8+ years', label: 'shipping production systems' },
-    { value: '~50%', label: 'faster incident resolution' },
-    { value: '6 repos', label: 'active product and platform portfolio' }
+    { value: '36', label: 'engineers led and mentored' },
+    { value: '~50%', label: 'faster incident resolution' }
   ];
 
   outcomes = [
+    'Led payment platform work beyond checkout: card, bank, check, wallet, PayPal, refund, reversal, chargeback, merchant, processor, and bank flows.',
+    'Led and mentored teams up to 36 engineers through design systems, technical support, code review, delivery standards, and production support.',
     'Built BeHeart and AI Dev Coach to improve AI-assisted engineering through persistent repo memory, prompt guardrails, and local-first workflows.',
-    'Built gig to turn ticket-to-release verification into deterministic evidence for QA, release managers, and engineering leads.',
-    'Shaped Beaus Tolling into separate backoffice and roadside platforms with bounded services, Kafka contracts, and operational documentation.'
+    'Shaped Beaus Tolling into separate backoffice and roadside platforms with bounded services, Kafka contracts, payment operations, and operational documentation.'
   ];
 
   quickLinks: QuickLink[] = [

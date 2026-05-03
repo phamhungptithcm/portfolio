@@ -19,18 +19,19 @@ SOFT = colors.HexColor("#f4f6f8")
 
 
 SUMMARY = (
-    "Senior platform and applied AI engineer with 8+ years building cloud-native Java systems, "
-    "AI engineering tools, release automation, and product foundations that teams can support in "
-    "production. Strongest in Spring Boot platforms, MCP-style developer workflows, observability, "
-    "distributed systems, and practical applied AI product design."
+    "Senior platform, payments, and applied AI engineer with 8+ years building Spring Boot systems, "
+    "payment workflows, AI engineering tools, release automation, and product foundations teams can "
+    "support in production. Payment depth includes credit cards, bank/ACH, checks, Apple Pay, Google Pay, "
+    "PayPal, refunds, reversals, chargebacks, merchant setup, processor/bank integrations, and auditable support paths."
 )
 
 
 CORE_STRENGTHS = [
+    "Payment lifecycle systems: auth/capture thinking, refunds, reversals, chargebacks, merchant setup, provider handoffs, and support workflows.",
     "Spring Boot microservices, event-driven integration, APIs, and platform boundaries.",
     "Applied AI infrastructure with persistent repo memory, prompt quality scoring, privacy guardrails, and MCP workflows.",
     "Mobile, web, and tolling platform foundations with Flutter, Firebase, Angular, Kafka, and operational documentation.",
-    "Reliability engineering through observability, diagnostics, release automation, and mentorship."
+    "Engineering leadership through design systems, technical support, code review, mentorship, release standards, and leading teams up to 36 engineers."
 ]
 
 
@@ -41,7 +42,8 @@ EXPERIENCE = [
         "location": "Dallas, Texas",
         "period": "2022 - Present",
         "bullets": [
-            "Led backend and platform delivery across tolling and payments workstreams with secure identity, operator workflows, and multi-service coordination.",
+            "Led backend and platform delivery across tolling and payment workstreams, including card, bank, check, Apple Pay, Google Pay, PayPal, refund, reversal, chargeback, merchant, processor, and bank integration flows.",
+            "Led and mentored teams up to 36 engineers through design systems, technical support, code review, API standards, release guardrails, and production-quality expectations.",
             "Reduced incident resolution time by about 50% using AppDynamics, heap and thread analysis, stronger diagnostics, and post-mortem follow-through.",
             "Improved checkout latency by about 35% with caching and asynchronous payment flows while raising API, review, and release standards."
         ]
@@ -52,8 +54,8 @@ EXPERIENCE = [
         "location": "Ho Chi Minh City, Vietnam",
         "period": "2021 - 2022",
         "bullets": [
-            "Delivered payment and platform features with maintainable service design, secure token flows, and safer release paths.",
-            "Introduced logging, diagnostics, mentoring, and review standards that shortened support feedback loops and improved maintainability."
+            "Delivered payment and platform features with maintainable service design, secure token flows, provider integrations, refund/reversal handling, and safer release paths.",
+            "Improved DTO, API, logging, diagnostics, mentoring, and review standards that shortened support feedback loops and made payment behavior easier to test."
         ]
     },
     {
@@ -102,7 +104,7 @@ PROJECTS = [
         "title": "Beaus Tolling Backoffice",
         "subtitle": "Modular tolling operations platform",
         "bullets": [
-            "Defined a Spring Boot and Angular platform with bounded services for SSO, account, vehicle, trip, case, payment, notification, DMV, batch, reporting, and customer self-service."
+            "Defined a Spring Boot and Angular platform with bounded services for SSO, account, vehicle, trip, case, payment, refund, dispute, notification, DMV, batch, reporting, and customer self-service."
         ]
     },
     {
@@ -118,8 +120,10 @@ PROJECTS = [
 SKILLS = {
     "Languages": "Java, Go, TypeScript, JavaScript, Dart, SQL",
     "Platforms": "Spring Boot, Angular, Flutter, Firebase, Kafka, Redis, Elasticsearch, MCP",
+    "Payments": "Credit cards, bank/ACH payments, checks, Apple Pay, Google Pay, PayPal, refunds, reversals, chargebacks, merchant setup, processor/bank integration",
     "Cloud and Ops": "AWS, Kubernetes, Docker, AppDynamics, CI/CD, GitHub Actions",
-    "Applied AI": "AI context infrastructure, prompt quality systems, browser extensions, LLM workflow guardrails, privacy-minded prompt redaction"
+    "Applied AI": "AI context infrastructure, prompt quality systems, browser extensions, LLM workflow guardrails, privacy-minded prompt redaction",
+    "Leadership": "Design systems, technical support, code review, mentoring, incident response, delivery standards, leading teams up to 36 engineers"
 }
 
 
@@ -168,19 +172,19 @@ def build_styles():
             parent=base["Heading2"],
             fontName="Helvetica-Bold",
             fontSize=10,
-            leading=12,
+            leading=11,
             textColor=ACCENT,
-            spaceBefore=6,
-            spaceAfter=8,
+            spaceBefore=4,
+            spaceAfter=5,
         ),
         "summary": ParagraphStyle(
             "Summary",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=9.2,
-            leading=13,
+            fontSize=8.9,
+            leading=12.1,
             textColor=TEXT,
-            spaceAfter=6,
+            spaceAfter=4,
         ),
         "meta": ParagraphStyle(
             "Meta",
@@ -194,8 +198,8 @@ def build_styles():
             "Heading",
             parent=base["BodyText"],
             fontName="Helvetica-Bold",
-            fontSize=10.2,
-            leading=13,
+            fontSize=9.9,
+            leading=12.2,
             textColor=TEXT,
             spaceAfter=2,
         ),
@@ -211,16 +215,16 @@ def build_styles():
             "Body",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=8.8,
-            leading=12,
+            fontSize=8.55,
+            leading=11.2,
             textColor=TEXT,
         ),
         "bullet": ParagraphStyle(
             "Bullet",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=8.8,
-            leading=11.8,
+            fontSize=8.45,
+            leading=10.8,
             leftIndent=10,
             firstLineIndent=-10,
             bulletIndent=0,
@@ -245,9 +249,9 @@ def bullet_list(items: list[str], styles: dict[str, ParagraphStyle]) -> list[Par
 
 def section_heading(text: str, styles: dict[str, ParagraphStyle]) -> list:
     return [
-        Spacer(1, 4),
+        Spacer(1, 3),
         Paragraph(text.upper(), styles["section"]),
-        HRFlowable(width="100%", thickness=0.6, color=LIGHT, spaceAfter=8, spaceBefore=0),
+        HRFlowable(width="100%", thickness=0.6, color=LIGHT, spaceAfter=6, spaceBefore=0),
     ]
 
 
@@ -269,13 +273,13 @@ def role_block(item: dict[str, str | list[str]], styles: dict[str, ParagraphStyl
             ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
         ]),
     )
-    flowables = [header, *bullet_list(item["bullets"], styles), Spacer(1, 4)]
+    flowables = [header, *bullet_list(item["bullets"], styles), Spacer(1, 2)]
     return KeepTogether(flowables)
 
 
 def project_block(item: dict[str, str | list[str]], styles: dict[str, ParagraphStyle]) -> KeepTogether:
     title = Paragraph(f"{item['title']} - <font color='#9f5d34'>{item['subtitle']}</font>", styles["heading"])
-    flowables = [title, *bullet_list(item["bullets"], styles), Spacer(1, 4)]
+    flowables = [title, *bullet_list(item["bullets"], styles), Spacer(1, 2)]
     return KeepTogether(flowables)
 
 
@@ -292,10 +296,10 @@ def build_resume(output_path: Path) -> None:
     doc = SimpleDocTemplate(
         str(output_path),
         pagesize=LETTER,
-        leftMargin=0.68 * inch,
-        rightMargin=0.68 * inch,
-        topMargin=0.55 * inch,
-        bottomMargin=0.55 * inch,
+        leftMargin=0.62 * inch,
+        rightMargin=0.62 * inch,
+        topMargin=0.48 * inch,
+        bottomMargin=0.48 * inch,
         title="Hung Pham Resume",
         author="Hung Pham",
     )
@@ -311,7 +315,7 @@ def build_resume(output_path: Path) -> None:
 
     story = [
         Paragraph("Hung Pham", styles["name"]),
-        Paragraph("Senior Platform / Applied AI Engineer", styles["role"]),
+        Paragraph("Senior Platform, Payments and Applied AI Engineer", styles["role"]),
         Paragraph(contact_line, styles["contact"]),
         HRFlowable(width="100%", thickness=0.9, color=ACCENT, spaceBefore=0, spaceAfter=10),
         *section_heading("Summary", styles),
@@ -331,7 +335,7 @@ def build_resume(output_path: Path) -> None:
     story.extend(section_heading("Skills", styles))
     for label, value in SKILLS.items():
         story.append(Paragraph(f"<b>{label}:</b> {value}", styles["body"]))
-        story.append(Spacer(1, 3))
+        story.append(Spacer(1, 1.5))
 
     story.extend(section_heading("Education", styles))
     for item in EDUCATION:

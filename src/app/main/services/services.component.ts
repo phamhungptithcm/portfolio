@@ -17,6 +17,18 @@ type Service = {
 export class ServicesComponent {
   services: Service[] = [
     {
+      id: 'payments',
+      kicker: 'Payment Systems',
+      title: 'Payment lifecycle engineering beyond simple checkout',
+      description: 'I work on payment systems as money-movement platforms, not just buttons that collect funds. The hard parts are state, risk, providers, exceptions, support, and auditability.',
+      details: [
+        'Credit card, bank, check, Apple Pay, Google Pay, PayPal, refund, reversal, undo, and chargeback flows.',
+        'Merchant setup, processor integration, bank-side behavior, provider handoffs, token flows, and failure states.',
+        'Support-ready workflows for customer service, reconciliation, dispute handling, and production diagnosis.'
+      ],
+      tags: ['Payments', 'Credit Card', 'Bank Payments', 'Digital Wallets', 'Refunds', 'Chargebacks']
+    },
+    {
       id: 'platforms',
       kicker: 'Platform Engineering',
       title: 'Cloud-native backends for complex operational workflows',
@@ -52,6 +64,18 @@ export class ServicesComponent {
         'Release automation, health checks, and documentation that keep independent products maintainable.'
       ],
       tags: ['Spring Boot', 'Kafka', 'Flutter', 'Firebase', 'CI/CD', 'Monitoring']
+    },
+    {
+      id: 'engineering-leadership',
+      kicker: 'Engineering Leadership',
+      title: 'Delivery standards for teams that need to move without breaking trust',
+      description: 'I create leverage through the engineering systems around the code: design systems, technical support, code review, mentoring, operating standards, and production feedback loops.',
+      details: [
+        'Led and mentored teams up to 36 engineers across delivery, review, support, and release responsibilities.',
+        'Built shared design-system and API patterns so teams ship consistent user experiences and service contracts.',
+        'Raised quality through code review, debugging support, incident follow-through, documentation, and repeatable delivery habits.'
+      ],
+      tags: ['Mentorship', 'Code Review', 'Design Systems', 'Technical Support', 'Standards', 'Delivery']
     }
   ];
 

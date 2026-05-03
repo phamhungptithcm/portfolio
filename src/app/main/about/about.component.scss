@@ -30,7 +30,8 @@
 }
 
 .about-avatar {
-  margin-bottom: 1.25rem;
+  max-width: 320px;
+  margin: 0 auto 1.25rem;
 
   picture {
     display: block;
@@ -38,6 +39,7 @@
 
   img {
     width: 100%;
+    height: auto;
     aspect-ratio: 1;
     display: block;
     border-radius: 24px;

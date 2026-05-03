@@ -122,20 +122,21 @@ export class WorkComponent {
       id: 'beaus-tolling',
       badge: 'Tolling Backoffice Platform',
       title: 'Beaus Tolling Backoffice',
-      summary: 'A modular tolling operations monorepo for CRM, case management, fulfillment, configuration, reporting, payments, identity, and customer self-service.',
-      problem: 'Tolling operators need to modernize backoffice workflows without risky monolithic replacement programs, while still integrating with roadside, payments, DMV, reporting, and agency ecosystems.',
-      role: 'Platform architect and product engineer shaping the repository model, bounded contexts, service portfolio, UI portfolio, integration contracts, and strategic documentation pack.',
+      summary: 'A modular tolling operations monorepo for CRM, case management, fulfillment, configuration, reporting, payment operations, identity, and customer self-service.',
+      problem: 'Tolling operators need to modernize backoffice workflows without risky monolithic replacement programs, while still integrating with roadside, payments, refunds, disputes, DMV, reporting, and agency ecosystems.',
+      role: 'Platform architect and product engineer shaping the repository model, bounded contexts, payment lifecycle, service portfolio, UI portfolio, integration contracts, and strategic documentation pack.',
       solution: [
         'Split the platform into clear backoffice domains including account, vehicle, trip, case, payment, notification, DMV, batch, report, core, and SSO services.',
+        'Modeled payment operations beyond checkout: credit card, bank, check, wallet, PayPal, refund, reversal, chargeback, merchant setup, processor/bank integration, and audit-friendly state transitions.',
         'Defined Angular application surfaces for CRM, fulfillment, case management, configuration, reporting, and online customer workflows.',
         'Established OpenAPI and AsyncAPI contracts, Kafka integration patterns, PostgreSQL-per-service ownership, Redis sessions, and Kubernetes runtime direction.'
       ],
       impact: [
-        'Demonstrates staff-level system thinking across commercial modularity, operational reliability, integration freedom, and enterprise governance.',
+        'Demonstrates staff-level system thinking across payment domain complexity, commercial modularity, operational reliability, integration freedom, and enterprise governance.',
         'Turns earlier tolling demo work into a more credible product platform with architecture, operating model, roadmap, security, and release governance.',
         'Strengthens backend/platform positioning with a domain-rich enterprise system rather than isolated UI demos.'
       ],
-      stack: ['Java 21', 'Spring Boot', 'Angular 17', 'Kafka', 'PostgreSQL', 'Redis', 'Kubernetes', 'OpenAPI'],
+      stack: ['Java 21', 'Spring Boot', 'Payments', 'Refunds', 'Chargebacks', 'Angular 17', 'Kafka', 'PostgreSQL', 'Kubernetes', 'OpenAPI'],
       actions: [
         { label: 'Repository', href: 'https://github.com/phamhungptithcm/beaus-tolling', event: 'project_beaus_tolling_repo' }
       ]

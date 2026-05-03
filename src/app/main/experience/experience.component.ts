@@ -18,7 +18,7 @@ type Role = {
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
-  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260413';
+  resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260503';
 
   constructor(private readonly analytics: PortfolioAnalyticsService) {}
 
@@ -29,12 +29,13 @@ export class ExperienceComponent {
       location: 'Dallas, Texas',
       start: new Date(2022, 0, 1),
       achievements: [
-        'Led backend and platform delivery across payments and tolling workstreams, balancing product needs with reliability and security constraints.',
+        'Led backend and platform delivery across tolling and payment workstreams, including card, bank, check, Apple Pay, Google Pay, PayPal, refund, reversal, chargeback, merchant, processor, and bank integration flows.',
+        'Led and mentored teams up to 36 engineers through design systems, technical support, code review, API standards, release guardrails, and production-quality expectations.',
         'Reduced checkout latency by about 35% with caching, asynchronous flows, and cleaner service orchestration.',
-        'Set stronger API and release standards through reviews, CI guardrails, and production-quality expectations across teams.',
+        'Reduced incident resolution time by about 50% using AppDynamics, heap and thread analysis, stronger diagnostics, and post-mortem follow-through.',
         'Built analytics and observability patterns that improved incident diagnosis and helped product teams reason about system behavior.'
       ],
-      skills: ['Java', 'Spring Boot', 'Angular', 'Kafka', 'Elasticsearch', 'AWS', 'OAuth2', 'CI/CD']
+      skills: ['Java', 'Spring Boot', 'Payments', 'Chargebacks', 'Angular', 'Kafka', 'AWS', 'Mentorship', 'CI/CD']
     },
     {
       title: 'Senior Software Engineer',
@@ -43,11 +44,11 @@ export class ExperienceComponent {
       start: new Date(2021, 0, 1),
       end: new Date(2022, 0, 1),
       achievements: [
-        'Delivered payment and platform features with a focus on maintainable service design and safer release paths.',
-        'Implemented secure token flows, payment integrations, and cleaner DTO and API patterns that improved maintainability.',
-        'Introduced centralized logging and diagnostic improvements that shortened defect triage and support feedback loops.'
+        'Delivered payment and platform features with maintainable service design, secure token flows, provider integrations, refund/reversal handling, and safer release paths.',
+        'Improved DTO, API, and integration patterns so payment behavior was easier to test, support, and reason about across teams.',
+        'Introduced centralized logging, diagnostic improvements, mentoring, and review standards that shortened defect triage and support feedback loops.'
       ],
-      skills: ['Java', 'Spring', 'Payments', 'Logging', 'Testing', 'Clean Architecture']
+      skills: ['Java', 'Spring', 'Payments', 'Provider Integrations', 'Logging', 'Testing', 'Code Review']
     },
     {
       title: 'Software Engineer',
