@@ -22,15 +22,23 @@
   padding: 1.5rem;
   border: 1px solid rgba(255, 230, 188, 0.12);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
+  background:
+    linear-gradient(145deg, rgba(105, 216, 255, 0.08), transparent 34%),
+    rgba(255, 255, 255, 0.03);
 }
 
 .lead-stat {
   margin: 0;
   color: var(--px-white);
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-size: 2.6rem;
   font-weight: 800;
   line-height: 0.95;
+}
+
+@media (min-width: 1080px) {
+  .lead-stat {
+    font-size: 3.6rem;
+  }
 }
 
 .lead-copy {
@@ -47,7 +55,7 @@
   margin-top: 1.25rem;
   padding: 0 1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ffe6bc, #cf9c70);
+  background: linear-gradient(135deg, #ffe6bc, #76f0b5);
   color: #171717;
   text-decoration: none;
   font-weight: 700;

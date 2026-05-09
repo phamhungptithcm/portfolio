@@ -21,8 +21,8 @@ export class ContactComponent {
 
   talkingPoints = [
     'Best fit: Senior or Staff platform, payments, backend, applied AI, and developer tooling roles.',
-    'Strongest domains: payment lifecycle systems, cloud-native services, developer tools, operations tooling, and release reliability.',
-    'Preferred signal in outreach: scope of ownership, team context, product stage, domain complexity, and technical problems to solve.'
+    'Strongest services: payment lifecycle ownership, cloud-native service architecture, AI engineering infrastructure, release verification, and production reliability.',
+    'Preferred signal in outreach: scope of ownership, team context, product stage, domain complexity, and what needs to be made safer, faster, or easier to operate.'
   ];
 
   actions: ContactAction[] = [

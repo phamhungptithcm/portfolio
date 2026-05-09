@@ -6,3 +6,5 @@ dist
 .playwright-cli/
 output/
 .venv-pdf/
+src/app/graphify-out/cache/
+src/app/graphify-out/.graphify_root

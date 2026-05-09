@@ -51,8 +51,14 @@
 .name {
   margin: 0;
   color: var(--px-white);
-  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-size: 1.9rem;
   font-weight: 700;
+}
+
+@media (min-width: 1080px) {
+  .name {
+    font-size: 2.35rem;
+  }
 }
 
 .title-location,
@@ -79,7 +85,7 @@
   min-height: 44px;
   padding: 0 1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ffe6bc, #cf9c70);
+  background: linear-gradient(135deg, #ffe6bc, #76f0b5);
   color: #171717;
   text-decoration: none;
   font-weight: 700;

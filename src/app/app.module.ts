@@ -10,6 +10,7 @@ import { ExperienceComponent } from "./main/experience/experience.component";
 import { ServicesComponent } from "./main/services/services.component";
 import { WorkComponent } from "./main/work/work.component";
 import { ContactComponent } from "./main/contact/contact.component";
+import { ScrollRevealDirective } from "./shared/scroll-reveal.directive";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactComponent } from "./main/contact/contact.component";
     ServicesComponent,
     WorkComponent,
     ContactComponent,
+    ScrollRevealDirective,
   ],
   imports: [
     BrowserModule,

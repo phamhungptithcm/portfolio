@@ -14,6 +14,11 @@ type QuickLink = {
   event: string;
 };
 
+type ServicePromise = {
+  label: string;
+  value: string;
+};
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,21 +26,25 @@ type QuickLink = {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-  roleEyebrow = 'Senior Platform, Payments & Applied AI Engineer';
+  roleEyebrow = 'Services for hiring teams';
   email = 'phamhung.working@gmail.com';
   resumeUrl = 'assets/Resume-Hung-Pham.pdf?v=20260503';
 
   proofMetrics: ProofMetric[] = [
-    { value: '8+ years', label: 'shipping production systems' },
-    { value: '36', label: 'engineers led and mentored' },
-    { value: '~50%', label: 'faster incident resolution' }
+    { value: '8+ years', label: 'backend, payments, and platform delivery' },
+    { value: '36', label: 'engineers led through reviews and support' },
+    { value: '~50%', label: 'faster production incident resolution' }
   ];
 
-  outcomes = [
-    'Led payment platform work beyond checkout: card, bank, check, wallet, PayPal, refund, reversal, chargeback, merchant, processor, and bank flows.',
-    'Led and mentored teams up to 36 engineers through design systems, technical support, code review, delivery standards, and production support.',
-    'Built BeHeart and AI Dev Coach to improve AI-assisted engineering through persistent repo memory, prompt guardrails, and local-first workflows.',
-    'Shaped Beaus Tolling into separate backoffice and roadside platforms with bounded services, Kafka contracts, payment operations, and operational documentation.'
+  servicePromises: ServicePromise[] = [
+    {
+      label: 'Payment and platform ownership',
+      value: 'Checkout, refunds, reversals, chargebacks, merchant setup, provider handoffs, service boundaries, and audit-ready support flows.'
+    },
+    {
+      label: 'Applied AI and delivery systems',
+      value: 'Repo memory, prompt guardrails, release verification, observability, mentoring, and operational documentation.'
+    }
   ];
 
   quickLinks: QuickLink[] = [
@@ -79,6 +88,10 @@ export class HomeComponent {
 
   trackByValue(_: number, value: string): string {
     return value;
+  }
+
+  trackByPromise(_: number, item: ServicePromise): string {
+    return item.label;
   }
 
   trackByHref(_: number, item: QuickLink): string {

@@ -16,7 +16,7 @@ export class MainComponent implements AfterViewInit, OnDestroy {
   showBackToTop = false;
 
   private observer?: IntersectionObserver;
-  private sectionIds: SectionId[] = ['home', 'work', 'experience', 'services', 'about', 'contact'];
+  private sectionIds: SectionId[] = ['home', 'services', 'work', 'experience', 'about', 'contact'];
   private prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
   constructor(private readonly analytics: PortfolioAnalyticsService) {}

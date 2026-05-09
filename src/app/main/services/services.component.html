@@ -1,24 +1,32 @@
 <section class="services container" aria-labelledby="services-title">
-  <div class="section-heading">
-    <h6>What I Lead</h6>
-    <h2 id="services-title">Payment systems, platform engineering, applied AI, and delivery leadership.</h2>
+  <div class="section-heading" appScrollReveal="0">
+    <h6>Services for Employers</h6>
+    <h2 id="services-title">The ownership I can provide to a hiring team.</h2>
     <p class="section-copy">
-      My value is not just shipping features. It is shaping the architecture, payment lifecycle, guardrails, and operating model that help products scale without turning into support debt.
+      My value is not just shipping tickets. It is taking responsibility for payment depth, backend architecture, applied AI workflow quality, release confidence, and the support burden after launch.
     </p>
   </div>
 
+  <div class="service-signal-grid" aria-label="Hiring signals">
+    <article class="service-signal motion-card signal-line" *ngFor="let signal of serviceSignals; index as i; trackBy: trackBySignal" appScrollReveal="{{ 80 + (i * 90) }}">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+    </article>
+  </div>
+
   <div class="services-grid">
-    <article class="service-card" *ngFor="let service of services; trackBy: trackById">
+    <article class="service-card motion-card" *ngFor="let service of services; index as i; trackBy: trackById" appScrollReveal="{{ 140 + (i * 80) }}">
       <p class="service-kicker">{{ service.kicker }}</p>
       <h3>{{ service.title }}</h3>
       <p class="service-description">{{ service.description }}</p>
+      <p class="service-promise">{{ service.promise }}</p>
 
       <ul class="service-list">
         <li *ngFor="let detail of service.details; trackBy: trackByValue">{{ detail }}</li>
       </ul>
 
       <div class="tags">
-        <span class="badge" *ngFor="let tag of service.tags; trackBy: trackByValue">{{ tag }}</span>
+        <span class="badge motion-chip" *ngFor="let tag of service.tags; trackBy: trackByValue">{{ tag }}</span>
       </div>
     </article>
   </div>

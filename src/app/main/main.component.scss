@@ -5,8 +5,9 @@
 .wrapper {
   padding-left: 0 !important;
   background:
-    radial-gradient(circle at top, rgba(255, 230, 188, 0.18), transparent 34%),
-    linear-gradient(180deg, #0d0b1c 0%, #0f1015 40%, #0a0b10 100%);
+    linear-gradient(135deg, rgba(255, 230, 188, 0.12), transparent 24rem),
+    linear-gradient(215deg, rgba(105, 216, 255, 0.1), transparent 28rem),
+    linear-gradient(180deg, #090a10 0%, #0f1015 42%, #08090d 100%);
 }
 
 .spy-section {
@@ -14,19 +15,19 @@
 }
 
 .home-section {
-  min-height: calc(100vh - 78px);
+  min-height: auto;
 }
 
 .section {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.work-section {
+.services-section {
   background: rgba(8, 9, 14, 0.74);
 }
 
+.work-section,
 .experience-section,
-.services-section,
 .about-section,
 .contact-section {
   background: rgba(10, 11, 16, 0.92);
@@ -88,7 +89,7 @@
   height: 48px;
   border: 0;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ffe6bc, #cf9c70);
+  background: linear-gradient(135deg, #ffe6bc, #76f0b5);
   color: #111;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
   opacity: 0;

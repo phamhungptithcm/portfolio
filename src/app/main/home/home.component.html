@@ -1,19 +1,19 @@
 <section class="home container" aria-labelledby="home-title">
   <div class="hero-grid">
-    <div class="hero-copy">
+    <div class="hero-copy" appScrollReveal="0">
       <p class="eyebrow">{{ roleEyebrow }}</p>
 
       <h1 id="home-title" class="hero-title">
-        I build reliable <span>Spring Boot</span>, payment, and applied AI platforms.
+        I help hiring teams ship <span>payment</span>, platform, and applied AI systems.
       </h1>
 
       <p class="hero-summary">
-        I ship cloud-native Java systems across payments, tolling, applied AI, and mobile products.
-        My payment work goes beyond checkout: cards, bank payments, checks, Apple Pay, Google Pay, PayPal, refunds, reversals, chargebacks, merchant setup, processor integrations, and support paths that make money movement auditable.
+        I am a senior engineer who can own the hard middle between product ambition and production reality:
+        backend architecture, payment lifecycle depth, applied AI workflows, release quality, and the operating habits that make systems supportable.
       </p>
 
       <div class="btn-bar">
-        <a class="px-btn px-btn--primary" [href]="resumeUrl" download (click)="track('cta_download_resume', resumeUrl)">
+        <a class="px-btn px-btn--primary magnetic-cta" [href]="resumeUrl" download (click)="track('cta_download_resume', resumeUrl)">
           Download Resume <i class="bi-download" aria-hidden="true"></i>
         </a>
         <a class="px-btn px-btn--ghost" href="#work" (click)="track('cta_view_work', '#work')">
@@ -25,24 +25,29 @@
       </div>
 
       <ul class="proof-strip" aria-label="Recruiter proof points">
-        <li *ngFor="let item of proofMetrics; trackBy: trackByLabel">
+        <li class="motion-card" *ngFor="let item of proofMetrics; index as i; trackBy: trackByLabel" appScrollReveal="{{ 120 + (i * 90) }}">
           <strong>{{ item.value }}</strong>
           <span>{{ item.label }}</span>
         </li>
       </ul>
     </div>
 
-    <aside class="hero-card" aria-labelledby="hero-proof-title">
-      <p class="eyebrow eyebrow--muted">Selected outcomes</p>
-      <h2 id="hero-proof-title">Production ownership, not just feature delivery.</h2>
+    <aside class="hero-card scan-surface" aria-labelledby="hero-proof-title" appScrollReveal="180">
+      <p class="eyebrow eyebrow--muted">What I can own</p>
+      <h2 id="hero-proof-title">Services that make me useful before and after the offer.</h2>
 
-      <ul class="outcome-list">
-        <li *ngFor="let item of outcomes; trackBy: trackByValue">{{ item }}</li>
-      </ul>
+      <div class="service-promises" aria-label="Employer service promises">
+        <article class="promise motion-card" *ngFor="let item of servicePromises; index as i; trackBy: trackByPromise" appScrollReveal="{{ 260 + (i * 90) }}">
+          <span class="promise-index">0{{ i + 1 }}</span>
+          <h3>{{ item.label }}</h3>
+          <p>{{ item.value }}</p>
+        </article>
+      </div>
 
       <div class="hero-links">
         <a
           *ngFor="let link of quickLinks; trackBy: trackByHref"
+          class="motion-link"
           [href]="link.href"
           [attr.target]="link.external ? '_blank' : null"
           [attr.rel]="link.external ? 'noopener noreferrer' : null"

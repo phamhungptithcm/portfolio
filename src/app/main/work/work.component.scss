@@ -39,9 +39,15 @@
   h3 {
     margin: 0.35rem 0 0;
     color: var(--px-white);
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-size: 1.85rem;
     line-height: 1.08;
     text-wrap: balance;
+  }
+}
+
+@media (min-width: 1080px) {
+  .case-study__lead h3 {
+    font-size: 2.35rem;
   }
 }
 
@@ -50,7 +56,7 @@
   color: rgba(255, 230, 188, 0.78);
   font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -59,6 +65,17 @@
   color: rgba(255, 255, 255, 0.74);
   font-size: 1.05rem;
   line-height: 1.72;
+}
+
+.case-study__signal {
+  margin: 1rem 0 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(105, 216, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(105, 216, 255, 0.06);
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 700;
+  line-height: 1.55;
 }
 
 .case-study__actions {
@@ -114,7 +131,7 @@
   color: rgba(255, 230, 188, 0.78);
   font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 

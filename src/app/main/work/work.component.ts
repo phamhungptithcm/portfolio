@@ -13,6 +13,7 @@ type Project = {
   badge: string;
   title: string;
   summary: string;
+  employerSignal: string;
   problem: string;
   role: string;
   solution: string[];
@@ -33,6 +34,7 @@ export class WorkComponent {
       badge: 'AI Infrastructure',
       title: 'BeHeart: Persistent Context Layer for AI Coding',
       summary: 'A local-first CLI and MCP product that gives AI coding tools reusable project memory instead of forcing every session to relearn the repo.',
+      employerSignal: 'Useful for teams adopting AI coding tools who need reusable repo context, guardrails, and lower context waste.',
       problem: 'AI coding tools lose context between sessions, burn tokens restating the same project knowledge, and miss existing code paths when teams use them inside real repositories.',
       role: 'Product owner and engineer responsible for product strategy, architecture, CLI/MCP workflows, document-aware memory, policy direction, and benchmark framing.',
       solution: [
@@ -55,6 +57,7 @@ export class WorkComponent {
       badge: 'Applied AI Product',
       title: 'AI Dev Coach',
       summary: 'A Chrome extension that coaches developers to use AI tools without building weak copy-paste habits.',
+      employerSignal: 'Useful for teams that want AI enablement to improve reasoning, privacy, and prompt quality instead of weakening engineering habits.',
       problem: 'AI can accelerate learning, but junior developers often skip reasoning, debugging, and prompt discipline when the interface rewards quick answers over better habits.',
       role: 'Product owner and engineer responsible for product framing, prompt quality logic, extension UX, privacy guardrails, docs, and release automation.',
       solution: [
@@ -77,6 +80,7 @@ export class WorkComponent {
       badge: 'Developer Tooling',
       title: 'gig: Ticket-aware Release Verification CLI',
       summary: 'A remote-first Go CLI that answers whether every change for a ticket actually made it into a release.',
+      employerSignal: 'Useful for release, QA, and platform teams that need deterministic evidence instead of manual ticket reconciliation.',
       problem: 'Release day slows down when teams have to manually reconcile tickets across commits, branches, pull requests, deployments, checks, linked work, and release notes.',
       role: 'Product owner and engineer responsible for product framing, provider workflows, CLI UX, release evidence modeling, packaging, docs, and demo assets.',
       solution: [
@@ -100,6 +104,7 @@ export class WorkComponent {
       badge: 'Mobile Product',
       title: 'BeFam: Genealogy and Clan Operations Platform',
       summary: 'A mobile-first product for genealogy, clan operations, membership access, and community workflows.',
+      employerSignal: 'Useful signal for product teams that need someone who can turn messy real-world workflows into mobile, backend, docs, and release systems.',
       problem: 'Family and clan operations often live across fragmented chats, spreadsheets, paper records, and informal processes that are hard to manage securely as the community grows.',
       role: 'Product owner and engineer responsible for product direction, mobile architecture, Firebase foundations, documentation, and release operations.',
       solution: [
@@ -123,6 +128,7 @@ export class WorkComponent {
       badge: 'Tolling Backoffice Platform',
       title: 'Beaus Tolling Backoffice',
       summary: 'A modular tolling operations monorepo for CRM, case management, fulfillment, configuration, reporting, payment operations, identity, and customer self-service.',
+      employerSignal: 'Useful for enterprise teams modernizing domain-heavy platforms with payments, operator workflows, contracts, and release governance.',
       problem: 'Tolling operators need to modernize backoffice workflows without risky monolithic replacement programs, while still integrating with roadside, payments, refunds, disputes, DMV, reporting, and agency ecosystems.',
       role: 'Platform architect and product engineer shaping the repository model, bounded contexts, payment lifecycle, service portfolio, UI portfolio, integration contracts, and strategic documentation pack.',
       solution: [
@@ -146,6 +152,7 @@ export class WorkComponent {
       badge: 'Roadside Ingestion Platform',
       title: 'Beaus Tolling Roadside',
       summary: 'A separate roadside platform for low-latency lane event ingest, field-device state, image evidence, and evidence-ready Kafka publication.',
+      employerSignal: 'Useful for teams that need event-driven ingestion, failure-domain separation, and operational reliability at the edge.',
       problem: 'Roadside capture and device operations have different latency, reliability, and release needs than backoffice case, payment, and operator workflows.',
       role: 'Platform architect and engineer responsible for service boundaries, ingest architecture, event contracts, reliability posture, and repository separation from backoffice domains.',
       solution: [

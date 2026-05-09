@@ -1,23 +1,24 @@
 <section class="work container" aria-labelledby="work-title">
-  <div class="section-heading">
-    <h6>Case Studies</h6>
-    <h2 id="work-title">Selected work with real operational complexity.</h2>
+  <div class="section-heading" appScrollReveal="0">
+    <h6>Proof</h6>
+    <h2 id="work-title">Case studies behind the services.</h2>
     <p class="section-copy">
-      These case studies are pulled from active public and private repos across AI infrastructure, developer tooling, mobile product systems, and tolling platforms.
+      These projects show how I think when the work has operational complexity: AI infrastructure, developer tooling, mobile products, tolling platforms, payment operations, and release reliability.
     </p>
   </div>
 
   <div class="case-studies">
-    <article class="case-study" *ngFor="let project of projects; index as i; trackBy: trackById" [class.case-study--reverse]="i % 2 === 1">
+    <article class="case-study motion-card" *ngFor="let project of projects; index as i; trackBy: trackById" [class.case-study--reverse]="i % 2 === 1" appScrollReveal="{{ 100 + (i * 70) }}">
       <div class="case-study__lead">
         <p class="case-study__kicker">{{ project.badge }}</p>
         <h3>{{ project.title }}</h3>
         <p class="case-study__summary">{{ project.summary }}</p>
+        <p class="case-study__signal">{{ project.employerSignal }}</p>
 
         <div class="case-study__actions" *ngIf="project.actions.length">
           <a
             *ngFor="let action of project.actions; trackBy: trackByHref"
-            class="case-study__action"
+            class="case-study__action motion-link"
             [href]="action.href"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,24 +30,24 @@
       </div>
 
       <div class="case-study__detail">
-        <div class="detail-row">
+        <div class="detail-row signal-line">
           <p class="detail-label">Problem</p>
           <p>{{ project.problem }}</p>
         </div>
 
-        <div class="detail-row">
+        <div class="detail-row signal-line">
           <p class="detail-label">Role</p>
           <p>{{ project.role }}</p>
         </div>
 
-        <div class="detail-row">
+        <div class="detail-row signal-line">
           <p class="detail-label">Solution</p>
           <ul>
             <li *ngFor="let item of project.solution; trackBy: trackByValue">{{ item }}</li>
           </ul>
         </div>
 
-        <div class="detail-row">
+        <div class="detail-row signal-line">
           <p class="detail-label">Impact</p>
           <ul>
             <li *ngFor="let item of project.impact; trackBy: trackByValue">{{ item }}</li>
@@ -54,7 +55,7 @@
         </div>
 
         <div class="tags">
-          <span class="badge" *ngFor="let tag of project.stack; trackBy: trackByValue">{{ tag }}</span>
+          <span class="badge motion-chip" *ngFor="let tag of project.stack; trackBy: trackByValue">{{ tag }}</span>
         </div>
       </div>
     </article>

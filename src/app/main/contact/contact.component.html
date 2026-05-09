@@ -1,16 +1,16 @@
 <section class="contact container" aria-labelledby="contact-title" itemscope itemtype="https://schema.org/ContactPage">
-  <div class="section-heading">
+  <div class="section-heading" appScrollReveal="0">
     <h6>Contact</h6>
-    <h2 id="contact-title">Start the conversation.</h2>
+    <h2 id="contact-title">Start with the problem you need owned.</h2>
     <p class="section-copy">
-      Open to Senior and Staff platform, backend, distributed systems, and applied AI opportunities in the US.
+      Open to Senior and Staff platform, payments, backend, distributed systems, developer tooling, and applied AI opportunities in the US.
     </p>
   </div>
 
   <div class="contact-grid">
-    <div class="contact-copy">
+    <div class="contact-copy" appScrollReveal="90">
       <p class="lead">
-        The easiest way to reach me is email. If you are hiring for platform engineering, applied AI, developer tooling, or cloud-native backend work, include the role, team, and what problem needs solving.
+        The easiest way to reach me is email. If you are hiring for platform engineering, payment systems, applied AI, developer tooling, or cloud-native backend work, include the role, team, and the problem that needs senior ownership.
       </p>
 
       <ul class="contact-points">
@@ -20,8 +20,9 @@
 
     <div class="contact-actions">
       <a
-        *ngFor="let action of actions; trackBy: trackByHref"
-        class="contact-card"
+        *ngFor="let action of actions; index as i; trackBy: trackByHref"
+        class="contact-card motion-card"
+        appScrollReveal="{{ 130 + (i * 80) }}"
         [href]="action.href"
         [attr.target]="action.external ? '_blank' : null"
         [attr.rel]="action.external ? 'noopener noreferrer' : null"

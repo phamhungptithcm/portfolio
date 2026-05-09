@@ -33,14 +33,15 @@
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ffe6bc, #b38b59);
+  background: linear-gradient(135deg, #ffe6bc, #69d8ff 54%, #76f0b5);
   box-shadow: 0 0 0 6px rgba(255, 230, 188, 0.12);
+  animation: pulse-mark 3.8s ease-in-out infinite;
 }
 
 .brand-name {
   font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 .nav-toggle {
@@ -119,7 +120,7 @@
 .nav-link.active,
 .nav-link[aria-current='page'] {
   color: var(--px-white);
-  background: rgba(255, 230, 188, 0.1);
+  background: rgba(105, 216, 255, 0.1);
 }
 
 .resume-link {
@@ -166,6 +167,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .brand-mark,
   .nav-toggle span,
   .nav-toggle span::before,
   .nav-toggle span::after,

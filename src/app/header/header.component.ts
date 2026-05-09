@@ -17,9 +17,9 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   currentSection = 'home';
 
   links: NavLink[] = [
-    { id: 'work', label: 'Case Studies' },
+    { id: 'services', label: 'Services' },
+    { id: 'work', label: 'Proof' },
     { id: 'experience', label: 'Experience' },
-    { id: 'services', label: 'What I Lead' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' }
   ];
