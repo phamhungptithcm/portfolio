@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "hunpeo",
+    "site": "hunpeo97",
     "public": "dist/portfolio",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
